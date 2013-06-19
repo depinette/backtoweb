@@ -27,6 +27,8 @@
 //  CopyHelper
 //
 
+#define WEBSERVER_ROOT @"/Library/WebServer/"
+
 
 #import "AppDelegate.h"
 
@@ -171,21 +173,26 @@ NSString* launchTask(NSArray* args)
 //[self trace:[NSString stringWithFormat:@"%@ %@", sourceDir, destinationDir]];
                             [fileManager createDirectoryAtPath:destinationDir withIntermediateDirectories:YES attributes:nil error:&error];
                             
-                            NSArray *contents = [fileManager contentsOfDirectoryAtPath:sourceDir error:&error];
-                            for (NSString* item in contents)
+                            //security check
+                            if ([destinationDir rangeOfString:WEBSERVER_ROOT].location == 0)
                             {
-                                if (error)
-                                    break;
-                                NSString *destinationFile = [destinationDir stringByAppendingPathComponent:item];
-                                if ([[item pathExtension] isEqualToString:extension])
+                                //copy items
+                                NSArray *contents = [fileManager contentsOfDirectoryAtPath:sourceDir error:&error];
+                                for (NSString* item in contents)
                                 {
-//[self trace:[NSString stringWithFormat:@"item:%@ %@", [sourceDir stringByAppendingPathComponent:item], destinationFile]];
-                                    if ([fileManager fileExistsAtPath:destinationFile])
-                                        [fileManager removeItemAtPath:destinationFile error:&error];
-                                    if (YES == [fileManager copyItemAtPath:[sourceDir stringByAppendingPathComponent:item] toPath:destinationFile error:&error])
+                                    if (error)
+                                        break;
+                                    NSString *destinationFile = [destinationDir stringByAppendingPathComponent:item];
+                                    if ([[item pathExtension] isEqualToString:extension])
                                     {
-                                        [self.textView insertNewline:nil];
-                                        [self.textView insertText:[NSString stringWithFormat:@"Successfully copied %@ to %@", [sourceDir stringByAppendingPathComponent:item], destinationFile]];
+    //[self trace:[NSString stringWithFormat:@"item:%@ %@", [sourceDir stringByAppendingPathComponent:item], destinationFile]];
+                                        if ([fileManager fileExistsAtPath:destinationFile])
+                                            [fileManager removeItemAtPath:destinationFile error:&error];
+                                        if (YES == [fileManager copyItemAtPath:[sourceDir stringByAppendingPathComponent:item] toPath:destinationFile error:&error])
+                                        {
+                                            [self.textView insertNewline:nil];
+                                            [self.textView insertText:[NSString stringWithFormat:@"Successfully copied %@ to %@", [sourceDir stringByAppendingPathComponent:item], destinationFile]];
+                                        }
                                     }
                                 }
                             }
