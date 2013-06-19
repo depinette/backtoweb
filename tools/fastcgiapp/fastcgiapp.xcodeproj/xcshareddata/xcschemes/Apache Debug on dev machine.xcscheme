@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0460"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "NO">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "63B2DBBE1711AE2C0067381C"
+               BuildableName = "CopyHelper.app"
+               BlueprintName = "CopyHelper"
+               ReferencedContainer = "container:../CopyHelper/CopyHelper.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DCB3185014EB418E001CFBEE"
+               BuildableName = "Lumberjack.framework"
+               BlueprintName = "Lumberjack"
+               ReferencedContainer = "container:../../frameworks/lumberjack/Xcode/LumberjackFramework/Desktop/Lumberjack.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "13D49D2B172BFABC003E7240"
+               BuildableName = "Backtoweb.framework"
+               BlueprintName = "Backtoweb"
+               ReferencedContainer = "container:../../frameworks/Backtoweb/Backtoweb.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "637A41BB16FA02FB00F695D8"
+               BuildableName = "UploadHandler.bundle"
+               BlueprintName = "UploadHandler"
+               ReferencedContainer = "container:../../handlers/UploadHandler/UploadHandler.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+               BuildableName = "fastcgiapp.fcgi"
+               BlueprintName = "fastcgiapp.fcgi"
+               ReferencedContainer = "container:fastcgiapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1397A3EB177093E60018DB75"
+               BuildableName = "HelloWorldHandler.bundle"
+               BlueprintName = "HelloWorldHandler"
+               ReferencedContainer = "container:../../handlers/HelloWorldHandler/HelloWorldHandler.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+            BuildableName = "fastcgiapp.fcgi"
+            BlueprintName = "fastcgiapp.fcgi"
+            ReferencedContainer = "container:fastcgiapp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      debugAsWhichUser = "root"
+      launchStyle = "1"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "osascript &quot;${PROJECT_DIR}/../../tools/scripts/LaunchHelper.scpt&quot; &quot;${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "63B2DBBE1711AE2C0067381C"
+                     BuildableName = "CopyHelper.app"
+                     BlueprintName = "CopyHelper"
+                     ReferencedContainer = "container:../CopyHelper/CopyHelper.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "osascript &quot;${PROJECT_DIR}/../../tools/scripts/CopyAsAdmin.scpt&quot; &quot;//copyfile${CONFIGURATION_BUILD_DIR}/${TARGET_NAME}?to=/Library/WebServer/CGI-Executables/${TARGET_NAME}&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+                     BuildableName = "fastcgiapp.fcgi"
+                     BlueprintName = "fastcgiapp.fcgi"
+                     ReferencedContainer = "container:fastcgiapp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "osascript &quot;${PROJECT_DIR}/../../tools/scripts/CopyAsAdmin.scpt&quot; &quot;//copyfiles${CONFIGURATION_BUILD_DIR}?to=/Library/WebServer/frameworks/\&amp;extension=framework&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+                     BuildableName = "fastcgiapp.fcgi"
+                     BlueprintName = "fastcgiapp.fcgi"
+                     ReferencedContainer = "container:fastcgiapp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "osascript &quot;${PROJECT_DIR}/../../tools/scripts/CopyAsAdmin.scpt&quot; &quot;//copyfiles${CONFIGURATION_BUILD_DIR}?to=/Library/WebServer/handlers/\&amp;extension=bundle&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+                     BuildableName = "fastcgiapp.fcgi"
+                     BlueprintName = "fastcgiapp.fcgi"
+                     ReferencedContainer = "container:fastcgiapp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "osascript &lt;&lt;ENDSCRIPT&#10;set shellScript to &quot;open -W copyhelper://restartapache &gt; /dev/null 2&gt;&amp;1 &amp;&quot;&#10;do shell script shellScript&#10;ENDSCRIPT&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+            BuildableName = "fastcgiapp.fcgi"
+            BlueprintName = "fastcgiapp.fcgi"
+            ReferencedContainer = "container:fastcgiapp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6302AFE8142114CF0021FD25"
+            BuildableName = "fastcgiapp.fcgi"
+            BlueprintName = "fastcgiapp.fcgi"
+            ReferencedContainer = "container:fastcgiapp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

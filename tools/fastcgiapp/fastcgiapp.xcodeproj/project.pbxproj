@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13D49DBA172C0B81003E7240 /* backtoweb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49DB8172C0B81003E7240 /* backtoweb.framework */; };
+		13D49DBB172C0B81003E7240 /* Lumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49DB9172C0B81003E7240 /* Lumberjack.framework */; };
+		6302AFEE142114CF0021FD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6302AFED142114CF0021FD25 /* Foundation.framework */; };
+		6302AFF1142114CF0021FD25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6302AFF0142114CF0021FD25 /* main.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6302AFE7142114CF0021FD25 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13D49DB8172C0B81003E7240 /* backtoweb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = backtoweb.framework; path = "../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/backtoweb.framework"; sourceTree = "<group>"; };
+		13D49DB9172C0B81003E7240 /* Lumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lumberjack.framework; path = "../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/Lumberjack.framework"; sourceTree = "<group>"; };
+		6302AFE9142114CF0021FD25 /* fastcgiapp.fcgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fastcgiapp.fcgi; sourceTree = BUILT_PRODUCTS_DIR; };
+		6302AFED142114CF0021FD25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6302AFF0142114CF0021FD25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6302AFF3142114CF0021FD25 /* fastcgiapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fastcgiapp-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6302AFE6142114CF0021FD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49DBA172C0B81003E7240 /* backtoweb.framework in Frameworks */,
+				13D49DBB172C0B81003E7240 /* Lumberjack.framework in Frameworks */,
+				6302AFEE142114CF0021FD25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6302AFDE142114CF0021FD25 = {
+			isa = PBXGroup;
+			children = (
+				6302AFEF142114CF0021FD25 /* fastcgiapp */,
+				6302AFEC142114CF0021FD25 /* Frameworks */,
+				6302AFEA142114CF0021FD25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6302AFEA142114CF0021FD25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6302AFE9142114CF0021FD25 /* fastcgiapp.fcgi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6302AFEC142114CF0021FD25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13D49DB8172C0B81003E7240 /* backtoweb.framework */,
+				13D49DB9172C0B81003E7240 /* Lumberjack.framework */,
+				6302AFED142114CF0021FD25 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6302AFEF142114CF0021FD25 /* fastcgiapp */ = {
+			isa = PBXGroup;
+			children = (
+				6302AFF0142114CF0021FD25 /* main.m */,
+				6302AFF2142114CF0021FD25 /* Supporting Files */,
+			);
+			path = fastcgiapp;
+			sourceTree = "<group>";
+		};
+		6302AFF2142114CF0021FD25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6302AFF3142114CF0021FD25 /* fastcgiapp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6302AFE8142114CF0021FD25 /* fastcgiapp.fcgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6302AFF8142114CF0021FD25 /* Build configuration list for PBXNativeTarget "fastcgiapp.fcgi" */;
+			buildPhases = (
+				6302AFE5142114CF0021FD25 /* Sources */,
+				6302AFE6142114CF0021FD25 /* Frameworks */,
+				6302AFE7142114CF0021FD25 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fastcgiapp.fcgi;
+			productName = fastcgiapp;
+			productReference = 6302AFE9142114CF0021FD25 /* fastcgiapp.fcgi */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6302AFE0142114CF0021FD25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 6302AFE3142114CF0021FD25 /* Build configuration list for PBXProject "fastcgiapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6302AFDE142114CF0021FD25;
+			productRefGroup = 6302AFEA142114CF0021FD25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6302AFE8142114CF0021FD25 /* fastcgiapp.fcgi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6302AFE5142114CF0021FD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6302AFF1142114CF0021FD25 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6302AFF6142114CF0021FD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../frameworks @loader_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6302AFF7142114CF0021FD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../frameworks @loader_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6302AFF9142114CF0021FD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fastcgiapp/fastcgiapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/fcgi-2.4.0\"/**",
+					"\"$(SRCROOT)/../common\"/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6302AFFA142114CF0021FD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fastcgiapp/fastcgiapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/fcgi-2.4.0\"/**",
+					"\"$(SRCROOT)/../common\"/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6302AFE3142114CF0021FD25 /* Build configuration list for PBXProject "fastcgiapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6302AFF6142114CF0021FD25 /* Debug */,
+				6302AFF7142114CF0021FD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6302AFF8142114CF0021FD25 /* Build configuration list for PBXNativeTarget "fastcgiapp.fcgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6302AFF9142114CF0021FD25 /* Debug */,
+				6302AFFA142114CF0021FD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6302AFE0142114CF0021FD25 /* Project object */;
+}

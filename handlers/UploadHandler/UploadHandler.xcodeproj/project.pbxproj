@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		136260461771B32900A62C6A /* uploadfile.html in Resources */ = {isa = PBXBuildFile; fileRef = 136260431771B32900A62C6A /* uploadfile.html */; };
+		1362604A1771B58800A62C6A /* uploadfile.html in Resources */ = {isa = PBXBuildFile; fileRef = 136260481771B58800A62C6A /* uploadfile.html */; };
+		13A06782172C401300AED032 /* Backtoweb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A06780172C401300AED032 /* Backtoweb.framework */; };
+		13A06783172C401300AED032 /* Lumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A06781172C401300AED032 /* Lumberjack.framework */; };
+		637A41C016FA02FB00F695D8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A41BF16FA02FB00F695D8 /* Cocoa.framework */; };
+		637A41CA16FA02FB00F695D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 637A41C816FA02FB00F695D8 /* InfoPlist.strings */; };
+		637A41D316FA033500F695D8 /* UploadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A41D216FA033500F695D8 /* UploadHandler.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		136260441771B32900A62C6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = uploadfile.html; sourceTree = "<group>"; };
+		136260491771B58800A62C6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/uploadfile.html; sourceTree = "<group>"; };
+		13A06780172C401300AED032 /* Backtoweb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Backtoweb.framework; path = "../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/Backtoweb.framework"; sourceTree = "<group>"; };
+		13A06781172C401300AED032 /* Lumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lumberjack.framework; path = "../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/Lumberjack.framework"; sourceTree = "<group>"; };
+		637A41BC16FA02FB00F695D8 /* UploadHandler.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UploadHandler.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		637A41BF16FA02FB00F695D8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		637A41C216FA02FB00F695D8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		637A41C316FA02FB00F695D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		637A41C416FA02FB00F695D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		637A41C716FA02FB00F695D8 /* UploadHandler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UploadHandler-Info.plist"; sourceTree = "<group>"; };
+		637A41C916FA02FB00F695D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		637A41CB16FA02FB00F695D8 /* UploadHandler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UploadHandler-Prefix.pch"; sourceTree = "<group>"; };
+		637A41D116FA033500F695D8 /* UploadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadHandler.h; sourceTree = "<group>"; };
+		637A41D216FA033500F695D8 /* UploadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadHandler.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		637A41B916FA02FB00F695D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A06782172C401300AED032 /* Backtoweb.framework in Frameworks */,
+				13A06783172C401300AED032 /* Lumberjack.framework in Frameworks */,
+				637A41C016FA02FB00F695D8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1362603F1771AE6500A62C6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				136260471771B54F00A62C6A /* fr.lproj */,
+				136260401771B32900A62C6A /* en.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		136260401771B32900A62C6A /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				136260431771B32900A62C6A /* uploadfile.html */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		136260471771B54F00A62C6A /* fr.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				136260481771B58800A62C6A /* uploadfile.html */,
+			);
+			name = fr.lproj;
+			sourceTree = "<group>";
+		};
+		637A41B316FA02FB00F695D8 = {
+			isa = PBXGroup;
+			children = (
+				637A41C516FA02FB00F695D8 /* UploadHandler */,
+				637A41BE16FA02FB00F695D8 /* Frameworks */,
+				637A41BD16FA02FB00F695D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		637A41BD16FA02FB00F695D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				637A41BC16FA02FB00F695D8 /* UploadHandler.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		637A41BE16FA02FB00F695D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13A06780172C401300AED032 /* Backtoweb.framework */,
+				13A06781172C401300AED032 /* Lumberjack.framework */,
+				637A41BF16FA02FB00F695D8 /* Cocoa.framework */,
+				637A41C116FA02FB00F695D8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		637A41C116FA02FB00F695D8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				637A41C216FA02FB00F695D8 /* AppKit.framework */,
+				637A41C316FA02FB00F695D8 /* CoreData.framework */,
+				637A41C416FA02FB00F695D8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		637A41C516FA02FB00F695D8 /* UploadHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1362603F1771AE6500A62C6A /* Resources */,
+				637A41C616FA02FB00F695D8 /* Supporting Files */,
+				637A41D116FA033500F695D8 /* UploadHandler.h */,
+				637A41D216FA033500F695D8 /* UploadHandler.m */,
+			);
+			path = UploadHandler;
+			sourceTree = "<group>";
+		};
+		637A41C616FA02FB00F695D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				637A41C716FA02FB00F695D8 /* UploadHandler-Info.plist */,
+				637A41C816FA02FB00F695D8 /* InfoPlist.strings */,
+				637A41CB16FA02FB00F695D8 /* UploadHandler-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		637A41BB16FA02FB00F695D8 /* UploadHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637A41CE16FA02FB00F695D8 /* Build configuration list for PBXNativeTarget "UploadHandler" */;
+			buildPhases = (
+				637A41B816FA02FB00F695D8 /* Sources */,
+				637A41B916FA02FB00F695D8 /* Frameworks */,
+				637A41BA16FA02FB00F695D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UploadHandler;
+			productName = UploadHandler;
+			productReference = 637A41BC16FA02FB00F695D8 /* UploadHandler.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		637A41B416FA02FB00F695D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = DEPSYS;
+			};
+			buildConfigurationList = 637A41B716FA02FB00F695D8 /* Build configuration list for PBXProject "UploadHandler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+			);
+			mainGroup = 637A41B316FA02FB00F695D8;
+			productRefGroup = 637A41BD16FA02FB00F695D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				637A41BB16FA02FB00F695D8 /* UploadHandler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		637A41BA16FA02FB00F695D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637A41CA16FA02FB00F695D8 /* InfoPlist.strings in Resources */,
+				136260461771B32900A62C6A /* uploadfile.html in Resources */,
+				1362604A1771B58800A62C6A /* uploadfile.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		637A41B816FA02FB00F695D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637A41D316FA033500F695D8 /* UploadHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		136260431771B32900A62C6A /* uploadfile.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				136260441771B32900A62C6A /* en */,
+			);
+			name = uploadfile.html;
+			sourceTree = "<group>";
+		};
+		136260481771B58800A62C6A /* uploadfile.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				136260491771B58800A62C6A /* fr */,
+			);
+			name = uploadfile.html;
+			sourceTree = "<group>";
+		};
+		637A41C816FA02FB00F695D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				637A41C916FA02FB00F695D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		637A41CC16FA02FB00F695D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		637A41CD16FA02FB00F695D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		637A41CF16FA02FB00F695D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UploadHandler/UploadHandler-Prefix.pch";
+				INFOPLIST_FILE = "UploadHandler/UploadHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		637A41D016FA02FB00F695D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UploadHandler/UploadHandler-Prefix.pch";
+				INFOPLIST_FILE = "UploadHandler/UploadHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		637A41B716FA02FB00F695D8 /* Build configuration list for PBXProject "UploadHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637A41CC16FA02FB00F695D8 /* Debug */,
+				637A41CD16FA02FB00F695D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637A41CE16FA02FB00F695D8 /* Build configuration list for PBXNativeTarget "UploadHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637A41CF16FA02FB00F695D8 /* Debug */,
+				637A41D016FA02FB00F695D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 637A41B416FA02FB00F695D8 /* Project object */;
+}

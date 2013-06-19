@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Backtoweb : File upload sample</title>
+</head>
+<body>
+<form action="file_upload_form" enctype="multipart/form-data" method="post">
+  multipart/form-data<br/>
+  Text: <input type="text" name="text1"/><br/>
+  Image 1: <input type="file" name="uploaded_file1"/><br/>
+  Image 2: <input type="file" name="uploaded_file2"/><br/>
+  <input type="submit" value="Submit">
+</form>
+
+<form action="file_upload_form" enctype="application/x-www-form-urlencoded" method="post" accept-charset="ISO-8859-1">
+  application/x-www-form-urlencoded charset=iso<br/>
+  Text: <input type="text" name="text2"/><br/>
+<input type="radio" name="radiotest" value="radio1">radio1<br/>
+<input type="radio" name="radiotest" value="radio2">radio2<br/>
+<input type="checkbox" name="checktest" value="Check1">Check1<br/>
+<input type="checkbox" name="checktest" value="Check2">Check2<br/>
+  <input type="submit" value="Submit">
+</form>
+
+<form action="file_upload_form" enctype="application/x-www-form-urlencoded" method="post" accept-charset="UTF-8">
+  application/x-www-form-urlencoded charset utf8<br/>
+  Text: <input type="text" name="text2"/><br/>
+<input type="radio" name="radiotest" value="radio1">radio1<br/>
+<input type="radio" name="radiotest" value="radio2">radio2<br/>
+<input type="checkbox" name="checktest" value="Check1">Check1<br/>
+<input type="checkbox" name="checktest" value="Check2">Check2<br/>
+  <input type="submit" value="Submit">
+</form>
+</body>
+
+</html>

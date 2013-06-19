@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13236341174BA6BA00F52335 /* FCServerContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1323633F174BA6BA00F52335 /* FCServerContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13236342174BA6BA00F52335 /* FCServerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 13236340174BA6BA00F52335 /* FCServerContext.m */; };
+		13D49D30172BFABC003E7240 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D2F172BFABC003E7240 /* Cocoa.framework */; };
+		13D49D3A172BFABC003E7240 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13D49D38172BFABC003E7240 /* InfoPlist.strings */; };
+		13D49D46172BFABC003E7240 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D45172BFABC003E7240 /* SenTestingKit.framework */; };
+		13D49D47172BFABC003E7240 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D2F172BFABC003E7240 /* Cocoa.framework */; };
+		13D49D4A172BFABC003E7240 /* Backtoweb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D2C172BFABC003E7240 /* Backtoweb.framework */; };
+		13D49D50172BFABC003E7240 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13D49D4E172BFABC003E7240 /* InfoPlist.strings */; };
+		13D49D53172BFABC003E7240 /* backtowebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D52172BFABC003E7240 /* backtowebTests.m */; };
+		13D49D6F172BFDD5003E7240 /* FCHandlerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D5D172BFDD5003E7240 /* FCHandlerItem.m */; };
+		13D49D70172BFDD5003E7240 /* FCHandlerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D5E172BFDD5003E7240 /* FCHandlerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49D71172BFDD5003E7240 /* FCHandlerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D5F172BFDD5003E7240 /* FCHandlerManager.m */; };
+		13D49D74172BFDD5003E7240 /* FCResponseStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D62172BFDD5003E7240 /* FCResponseStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49D75172BFDD5003E7240 /* FCResponseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D63172BFDD5003E7240 /* FCResponseStream.m */; };
+		13D49D7C172BFDD5003E7240 /* FCURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D6A172BFDD5003E7240 /* FCURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49D7D172BFDD5003E7240 /* FCURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D6B172BFDD5003E7240 /* FCURLRequest.m */; };
+		13D49D7E172BFDD5003E7240 /* NSBundle+additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D6C172BFDD5003E7240 /* NSBundle+additions.h */; };
+		13D49D7F172BFDD5003E7240 /* NSBundle+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D6D172BFDD5003E7240 /* NSBundle+additions.m */; };
+		13D49D8A172BFDED003E7240 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D81172BFDED003E7240 /* DDData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49D8B172BFDED003E7240 /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D82172BFDED003E7240 /* DDData.m */; };
+		13D49D8C172BFDED003E7240 /* MultipartFormDataParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D84172BFDED003E7240 /* MultipartFormDataParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49D8D172BFDED003E7240 /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D85172BFDED003E7240 /* MultipartFormDataParser.m */; };
+		13D49D8E172BFDED003E7240 /* MultipartMessageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D86172BFDED003E7240 /* MultipartMessageHeader.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49D8F172BFDED003E7240 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D87172BFDED003E7240 /* MultipartMessageHeader.m */; };
+		13D49D90172BFDED003E7240 /* MultipartMessageHeaderField.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D88172BFDED003E7240 /* MultipartMessageHeaderField.h */; };
+		13D49D91172BFDED003E7240 /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D89172BFDED003E7240 /* MultipartMessageHeaderField.m */; };
+		13D49D97172C0060003E7240 /* fcgi_stdio.c in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D93172C0060003E7240 /* fcgi_stdio.c */; };
+		13D49D98172C0060003E7240 /* fcgiapp.c in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D94172C0060003E7240 /* fcgiapp.c */; };
+		13D49D99172C0060003E7240 /* fcgio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D95172C0060003E7240 /* fcgio.cpp */; };
+		13D49D9A172C0060003E7240 /* os_unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 13D49D96172C0060003E7240 /* os_unix.c */; };
+		13D49DA0172C0082003E7240 /* fcgi_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D9B172C0082003E7240 /* fcgi_config.h */; };
+		13D49DA1172C0082003E7240 /* fastcgi.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D9C172C0082003E7240 /* fastcgi.h */; };
+		13D49DA2172C0082003E7240 /* fcgi_stdio.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D9D172C0082003E7240 /* fcgi_stdio.h */; };
+		13D49DA3172C0082003E7240 /* fcgiapp.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D9E172C0082003E7240 /* fcgiapp.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49DA4172C0082003E7240 /* fcgimisc.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49D9F172C0082003E7240 /* fcgimisc.h */; };
+		13D49DA6172C00A3003E7240 /* fcgio.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DA5172C00A3003E7240 /* fcgio.h */; };
+		13D49DAA172C015E003E7240 /* fcgios.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DA9172C015E003E7240 /* fcgios.h */; };
+		13D49DAC172C0257003E7240 /* FCURLRequestPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DAB172C0257003E7240 /* FCURLRequestPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49DAE172C02BE003E7240 /* FCResponseStreamPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DAD172C02BE003E7240 /* FCResponseStreamPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49DB0172C0352003E7240 /* FCHandlerItemPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DAF172C0352003E7240 /* FCHandlerItemPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49DB2172C0397003E7240 /* FCHandlerManagerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DB1172C0397003E7240 /* FCHandlerManagerPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		13D49DB7172C0A52003E7240 /* Lumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49DB6172C0A52003E7240 /* Lumberjack.framework */; };
+		13D49DBD172C0DF7003E7240 /* FCRequestHandlerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DBC172C0DF7003E7240 /* FCRequestHandlerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49DBF172C0E4B003E7240 /* FCHandlerItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DBE172C0E4B003E7240 /* FCHandlerItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D49DC1172C1205003E7240 /* Backtoweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 13D49DC0172C1205003E7240 /* Backtoweb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13D49D48172BFABC003E7240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13D49D23172BFABC003E7240 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13D49D2B172BFABC003E7240;
+			remoteInfo = backtoweb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1323633F174BA6BA00F52335 /* FCServerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCServerContext.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13236340174BA6BA00F52335 /* FCServerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCServerContext.m; sourceTree = "<group>"; };
+		13D49D2C172BFABC003E7240 /* Backtoweb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backtoweb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13D49D2F172BFABC003E7240 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		13D49D32172BFABC003E7240 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		13D49D33172BFABC003E7240 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		13D49D34172BFABC003E7240 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		13D49D37172BFABC003E7240 /* backtoweb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "backtoweb-Info.plist"; sourceTree = "<group>"; };
+		13D49D39172BFABC003E7240 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13D49D3B172BFABC003E7240 /* backtoweb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "backtoweb-Prefix.pch"; sourceTree = "<group>"; };
+		13D49D44172BFABC003E7240 /* backtowebTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = backtowebTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13D49D45172BFABC003E7240 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		13D49D4D172BFABC003E7240 /* backtowebTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "backtowebTests-Info.plist"; sourceTree = "<group>"; };
+		13D49D4F172BFABC003E7240 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13D49D51172BFABC003E7240 /* backtowebTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = backtowebTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13D49D52172BFABC003E7240 /* backtowebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = backtowebTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		13D49D5D172BFDD5003E7240 /* FCHandlerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHandlerItem.m; sourceTree = "<group>"; };
+		13D49D5E172BFDD5003E7240 /* FCHandlerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHandlerManager.h; sourceTree = "<group>"; };
+		13D49D5F172BFDD5003E7240 /* FCHandlerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHandlerManager.m; sourceTree = "<group>"; };
+		13D49D62172BFDD5003E7240 /* FCResponseStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCResponseStream.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13D49D63172BFDD5003E7240 /* FCResponseStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FCResponseStream.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		13D49D6A172BFDD5003E7240 /* FCURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCURLRequest.h; sourceTree = "<group>"; };
+		13D49D6B172BFDD5003E7240 /* FCURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCURLRequest.m; sourceTree = "<group>"; };
+		13D49D6C172BFDD5003E7240 /* NSBundle+additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+additions.h"; sourceTree = "<group>"; };
+		13D49D6D172BFDD5003E7240 /* NSBundle+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSBundle+additions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		13D49D81172BFDED003E7240 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
+		13D49D82172BFDED003E7240 /* DDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDData.m; sourceTree = "<group>"; };
+		13D49D84172BFDED003E7240 /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
+		13D49D85172BFDED003E7240 /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
+		13D49D86172BFDED003E7240 /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
+		13D49D87172BFDED003E7240 /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeader.m; sourceTree = "<group>"; };
+		13D49D88172BFDED003E7240 /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeaderField.h; sourceTree = "<group>"; };
+		13D49D89172BFDED003E7240 /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeaderField.m; sourceTree = "<group>"; };
+		13D49D93172C0060003E7240 /* fcgi_stdio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fcgi_stdio.c; path = "fcgi-2.4.0/libfcgi/fcgi_stdio.c"; sourceTree = "<group>"; };
+		13D49D94172C0060003E7240 /* fcgiapp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fcgiapp.c; path = "fcgi-2.4.0/libfcgi/fcgiapp.c"; sourceTree = "<group>"; };
+		13D49D95172C0060003E7240 /* fcgio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fcgio.cpp; path = "fcgi-2.4.0/libfcgi/fcgio.cpp"; sourceTree = "<group>"; };
+		13D49D96172C0060003E7240 /* os_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = os_unix.c; path = "fcgi-2.4.0/libfcgi/os_unix.c"; sourceTree = "<group>"; };
+		13D49D9B172C0082003E7240 /* fcgi_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgi_config.h; path = "fcgi-2.4.0/fcgi_config.h"; sourceTree = "<group>"; };
+		13D49D9C172C0082003E7240 /* fastcgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fastcgi.h; path = "fcgi-2.4.0/include/fastcgi.h"; sourceTree = "<group>"; };
+		13D49D9D172C0082003E7240 /* fcgi_stdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgi_stdio.h; path = "fcgi-2.4.0/include/fcgi_stdio.h"; sourceTree = "<group>"; };
+		13D49D9E172C0082003E7240 /* fcgiapp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgiapp.h; path = "fcgi-2.4.0/include/fcgiapp.h"; sourceTree = "<group>"; };
+		13D49D9F172C0082003E7240 /* fcgimisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgimisc.h; path = "fcgi-2.4.0/include/fcgimisc.h"; sourceTree = "<group>"; };
+		13D49DA5172C00A3003E7240 /* fcgio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgio.h; path = "fcgi-2.4.0/include/fcgio.h"; sourceTree = "<group>"; };
+		13D49DA9172C015E003E7240 /* fcgios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fcgios.h; path = "fcgi-2.4.0/include/fcgios.h"; sourceTree = "<group>"; };
+		13D49DAB172C0257003E7240 /* FCURLRequestPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCURLRequestPrivate.h; sourceTree = "<group>"; };
+		13D49DAD172C02BE003E7240 /* FCResponseStreamPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCResponseStreamPrivate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13D49DAF172C0352003E7240 /* FCHandlerItemPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHandlerItemPrivate.h; sourceTree = "<group>"; };
+		13D49DB1172C0397003E7240 /* FCHandlerManagerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCHandlerManagerPrivate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13D49DB6172C0A52003E7240 /* Lumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lumberjack.framework; path = "../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/Lumberjack.framework"; sourceTree = "<group>"; };
+		13D49DBC172C0DF7003E7240 /* FCRequestHandlerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCRequestHandlerProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13D49DBE172C0E4B003E7240 /* FCHandlerItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHandlerItemProtocol.h; sourceTree = "<group>"; };
+		13D49DC0172C1205003E7240 /* Backtoweb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Backtoweb.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13D49D28172BFABC003E7240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49DB7172C0A52003E7240 /* Lumberjack.framework in Frameworks */,
+				13D49D30172BFABC003E7240 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13D49D40172BFABC003E7240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49D46172BFABC003E7240 /* SenTestingKit.framework in Frameworks */,
+				13D49D47172BFABC003E7240 /* Cocoa.framework in Frameworks */,
+				13D49D4A172BFABC003E7240 /* Backtoweb.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13D49D22172BFABC003E7240 = {
+			isa = PBXGroup;
+			children = (
+				13D49D92172C003C003E7240 /* libfcgi */,
+				13D49D80172BFDED003E7240 /* categories */,
+				13D49D83172BFDED003E7240 /* mime */,
+				13D49D35172BFABC003E7240 /* backtoweb */,
+				13D49D4B172BFABC003E7240 /* backtowebTests */,
+				13D49D2E172BFABC003E7240 /* Frameworks */,
+				13D49D2D172BFABC003E7240 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13D49D2D172BFABC003E7240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D2C172BFABC003E7240 /* Backtoweb.framework */,
+				13D49D44172BFABC003E7240 /* backtowebTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13D49D2E172BFABC003E7240 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13D49DB6172C0A52003E7240 /* Lumberjack.framework */,
+				13D49D2F172BFABC003E7240 /* Cocoa.framework */,
+				13D49D45172BFABC003E7240 /* SenTestingKit.framework */,
+				13D49D31172BFABC003E7240 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13D49D31172BFABC003E7240 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D32172BFABC003E7240 /* AppKit.framework */,
+				13D49D33172BFABC003E7240 /* CoreData.framework */,
+				13D49D34172BFABC003E7240 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		13D49D35172BFABC003E7240 /* backtoweb */ = {
+			isa = PBXGroup;
+			children = (
+				13D49DC0172C1205003E7240 /* Backtoweb.h */,
+				13D49DBC172C0DF7003E7240 /* FCRequestHandlerProtocol.h */,
+				13D49DBE172C0E4B003E7240 /* FCHandlerItemProtocol.h */,
+				13D49DAF172C0352003E7240 /* FCHandlerItemPrivate.h */,
+				13D49D5D172BFDD5003E7240 /* FCHandlerItem.m */,
+				13D49DB1172C0397003E7240 /* FCHandlerManagerPrivate.h */,
+				13D49D5E172BFDD5003E7240 /* FCHandlerManager.h */,
+				13D49D5F172BFDD5003E7240 /* FCHandlerManager.m */,
+				13D49DAD172C02BE003E7240 /* FCResponseStreamPrivate.h */,
+				13D49D62172BFDD5003E7240 /* FCResponseStream.h */,
+				13D49D63172BFDD5003E7240 /* FCResponseStream.m */,
+				13D49DAB172C0257003E7240 /* FCURLRequestPrivate.h */,
+				13D49D6A172BFDD5003E7240 /* FCURLRequest.h */,
+				13D49D6B172BFDD5003E7240 /* FCURLRequest.m */,
+				1323633F174BA6BA00F52335 /* FCServerContext.h */,
+				13236340174BA6BA00F52335 /* FCServerContext.m */,
+				13D49D6C172BFDD5003E7240 /* NSBundle+additions.h */,
+				13D49D6D172BFDD5003E7240 /* NSBundle+additions.m */,
+				13D49D36172BFABC003E7240 /* Supporting Files */,
+			);
+			path = backtoweb;
+			sourceTree = "<group>";
+		};
+		13D49D36172BFABC003E7240 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D37172BFABC003E7240 /* backtoweb-Info.plist */,
+				13D49D38172BFABC003E7240 /* InfoPlist.strings */,
+				13D49D3B172BFABC003E7240 /* backtoweb-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13D49D4B172BFABC003E7240 /* backtowebTests */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D51172BFABC003E7240 /* backtowebTests.h */,
+				13D49D52172BFABC003E7240 /* backtowebTests.m */,
+				13D49D4C172BFABC003E7240 /* Supporting Files */,
+			);
+			path = backtowebTests;
+			sourceTree = "<group>";
+		};
+		13D49D4C172BFABC003E7240 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D4D172BFABC003E7240 /* backtowebTests-Info.plist */,
+				13D49D4E172BFABC003E7240 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13D49D80172BFDED003E7240 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D81172BFDED003E7240 /* DDData.h */,
+				13D49D82172BFDED003E7240 /* DDData.m */,
+			);
+			name = categories;
+			path = external/categories;
+			sourceTree = "<group>";
+		};
+		13D49D83172BFDED003E7240 /* mime */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D84172BFDED003E7240 /* MultipartFormDataParser.h */,
+				13D49D85172BFDED003E7240 /* MultipartFormDataParser.m */,
+				13D49D86172BFDED003E7240 /* MultipartMessageHeader.h */,
+				13D49D87172BFDED003E7240 /* MultipartMessageHeader.m */,
+				13D49D88172BFDED003E7240 /* MultipartMessageHeaderField.h */,
+				13D49D89172BFDED003E7240 /* MultipartMessageHeaderField.m */,
+			);
+			name = mime;
+			path = external/mime;
+			sourceTree = "<group>";
+		};
+		13D49D92172C003C003E7240 /* libfcgi */ = {
+			isa = PBXGroup;
+			children = (
+				13D49D9B172C0082003E7240 /* fcgi_config.h */,
+				13D49D9D172C0082003E7240 /* fcgi_stdio.h */,
+				13D49D93172C0060003E7240 /* fcgi_stdio.c */,
+				13D49D9E172C0082003E7240 /* fcgiapp.h */,
+				13D49D94172C0060003E7240 /* fcgiapp.c */,
+				13D49D9C172C0082003E7240 /* fastcgi.h */,
+				13D49D9F172C0082003E7240 /* fcgimisc.h */,
+				13D49DA5172C00A3003E7240 /* fcgio.h */,
+				13D49D95172C0060003E7240 /* fcgio.cpp */,
+				13D49DA9172C015E003E7240 /* fcgios.h */,
+				13D49D96172C0060003E7240 /* os_unix.c */,
+			);
+			name = libfcgi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		13D49D29172BFABC003E7240 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49DBD172C0DF7003E7240 /* FCRequestHandlerProtocol.h in Headers */,
+				13D49DBF172C0E4B003E7240 /* FCHandlerItemProtocol.h in Headers */,
+				13D49D7C172BFDD5003E7240 /* FCURLRequest.h in Headers */,
+				13D49D74172BFDD5003E7240 /* FCResponseStream.h in Headers */,
+				13D49D70172BFDD5003E7240 /* FCHandlerManager.h in Headers */,
+				13D49D8A172BFDED003E7240 /* DDData.h in Headers */,
+				13D49DC1172C1205003E7240 /* Backtoweb.h in Headers */,
+				13236341174BA6BA00F52335 /* FCServerContext.h in Headers */,
+				13D49DAC172C0257003E7240 /* FCURLRequestPrivate.h in Headers */,
+				13D49DAE172C02BE003E7240 /* FCResponseStreamPrivate.h in Headers */,
+				13D49DB0172C0352003E7240 /* FCHandlerItemPrivate.h in Headers */,
+				13D49DB2172C0397003E7240 /* FCHandlerManagerPrivate.h in Headers */,
+				13D49D8C172BFDED003E7240 /* MultipartFormDataParser.h in Headers */,
+				13D49D8E172BFDED003E7240 /* MultipartMessageHeader.h in Headers */,
+				13D49DA3172C0082003E7240 /* fcgiapp.h in Headers */,
+				13D49D7E172BFDD5003E7240 /* NSBundle+additions.h in Headers */,
+				13D49D90172BFDED003E7240 /* MultipartMessageHeaderField.h in Headers */,
+				13D49DA0172C0082003E7240 /* fcgi_config.h in Headers */,
+				13D49DA1172C0082003E7240 /* fastcgi.h in Headers */,
+				13D49DA2172C0082003E7240 /* fcgi_stdio.h in Headers */,
+				13D49DA4172C0082003E7240 /* fcgimisc.h in Headers */,
+				13D49DA6172C00A3003E7240 /* fcgio.h in Headers */,
+				13D49DAA172C015E003E7240 /* fcgios.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13D49D2B172BFABC003E7240 /* Backtoweb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13D49D56172BFABC003E7240 /* Build configuration list for PBXNativeTarget "Backtoweb" */;
+			buildPhases = (
+				13D49D27172BFABC003E7240 /* Sources */,
+				13D49D28172BFABC003E7240 /* Frameworks */,
+				13D49D29172BFABC003E7240 /* Headers */,
+				13D49D2A172BFABC003E7240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Backtoweb;
+			productName = backtoweb;
+			productReference = 13D49D2C172BFABC003E7240 /* Backtoweb.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		13D49D43172BFABC003E7240 /* backtowebTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13D49D59172BFABC003E7240 /* Build configuration list for PBXNativeTarget "backtowebTests" */;
+			buildPhases = (
+				13D49D3F172BFABC003E7240 /* Sources */,
+				13D49D40172BFABC003E7240 /* Frameworks */,
+				13D49D41172BFABC003E7240 /* Resources */,
+				13D49D42172BFABC003E7240 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13D49D49172BFABC003E7240 /* PBXTargetDependency */,
+			);
+			name = backtowebTests;
+			productName = backtowebTests;
+			productReference = 13D49D44172BFABC003E7240 /* backtowebTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13D49D23172BFABC003E7240 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = depsys;
+			};
+			buildConfigurationList = 13D49D26172BFABC003E7240 /* Build configuration list for PBXProject "Backtoweb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 13D49D22172BFABC003E7240;
+			productRefGroup = 13D49D2D172BFABC003E7240 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13D49D2B172BFABC003E7240 /* Backtoweb */,
+				13D49D43172BFABC003E7240 /* backtowebTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13D49D2A172BFABC003E7240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49D3A172BFABC003E7240 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13D49D41172BFABC003E7240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49D50172BFABC003E7240 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13D49D42172BFABC003E7240 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13D49D27172BFABC003E7240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49D6F172BFDD5003E7240 /* FCHandlerItem.m in Sources */,
+				13D49D71172BFDD5003E7240 /* FCHandlerManager.m in Sources */,
+				13D49D75172BFDD5003E7240 /* FCResponseStream.m in Sources */,
+				13D49D7D172BFDD5003E7240 /* FCURLRequest.m in Sources */,
+				13D49D7F172BFDD5003E7240 /* NSBundle+additions.m in Sources */,
+				13D49D8B172BFDED003E7240 /* DDData.m in Sources */,
+				13D49D8D172BFDED003E7240 /* MultipartFormDataParser.m in Sources */,
+				13D49D8F172BFDED003E7240 /* MultipartMessageHeader.m in Sources */,
+				13D49D91172BFDED003E7240 /* MultipartMessageHeaderField.m in Sources */,
+				13D49D97172C0060003E7240 /* fcgi_stdio.c in Sources */,
+				13D49D98172C0060003E7240 /* fcgiapp.c in Sources */,
+				13D49D99172C0060003E7240 /* fcgio.cpp in Sources */,
+				13D49D9A172C0060003E7240 /* os_unix.c in Sources */,
+				13236342174BA6BA00F52335 /* FCServerContext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13D49D3F172BFABC003E7240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D49D53172BFABC003E7240 /* backtowebTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13D49D49172BFABC003E7240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13D49D2B172BFABC003E7240 /* Backtoweb */;
+			targetProxy = 13D49D48172BFABC003E7240 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13D49D38172BFABC003E7240 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13D49D39172BFABC003E7240 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13D49D4E172BFABC003E7240 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13D49D4F172BFABC003E7240 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13D49D54172BFABC003E7240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@rpath/../frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		13D49D55172BFABC003E7240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@rpath/../frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		13D49D57172BFABC003E7240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "backtoweb/backtoweb-Prefix.pch";
+				INFOPLIST_FILE = "backtoweb/backtoweb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		13D49D58172BFABC003E7240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "backtoweb/backtoweb-Prefix.pch";
+				INFOPLIST_FILE = "backtoweb/backtoweb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		13D49D5A172BFABC003E7240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "backtoweb/backtoweb-Prefix.pch";
+				INFOPLIST_FILE = "backtowebTests/backtowebTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		13D49D5B172BFABC003E7240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "backtoweb/backtoweb-Prefix.pch";
+				INFOPLIST_FILE = "backtowebTests/backtowebTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13D49D26172BFABC003E7240 /* Build configuration list for PBXProject "Backtoweb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13D49D54172BFABC003E7240 /* Debug */,
+				13D49D55172BFABC003E7240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13D49D56172BFABC003E7240 /* Build configuration list for PBXNativeTarget "Backtoweb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13D49D57172BFABC003E7240 /* Debug */,
+				13D49D58172BFABC003E7240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13D49D59172BFABC003E7240 /* Build configuration list for PBXNativeTarget "backtowebTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13D49D5A172BFABC003E7240 /* Debug */,
+				13D49D5B172BFABC003E7240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13D49D23172BFABC003E7240 /* Project object */;
+}

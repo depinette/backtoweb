@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'HelloWorldHandler' target in the 'HelloWorldHandler' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
