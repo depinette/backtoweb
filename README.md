@@ -56,7 +56,15 @@ We are using this [homebrew formulae](https://github.com/Homebrew/homebrew-apach
 brew install https://raw.github.com/Homebrew/homebrew-apache/master/mod_fastcgi.rb
 ```
 
-If you don't have homebrew installed or if you encounter a problem during the installation of the formulae,
+A common problem with this formulae is :
+
+In that case, use the command and retry the brew install ...
+
+```bash
+$ [ "$(sw_vers -productVersion | sed 's/^\(10\.[0-9]\).*/\1/')" = "10.8" ] && bash -c "[ -d /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain ] && sudo bash -c 'cd /Applications/Xcode.app/Contents/Developer/Toolchains/ && ln -vs XcodeDefault.xctoolchain OSX10.8.xctoolchain' || sudo bash -c 'mkdir -vp /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr && cd /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr && ln -vs /usr/bin'"
+```
+
+If you don't have homebrew installed or if you want to know more about the toolchain problem,
 just check [this page](https://github.com/Homebrew/homebrew-apache).
 
 Alternatively, if you know what you're doing, you can build mod_fastcgi.so from the [source code](http://www.fastcgi.com/dist/fcgi.tar.gz).
