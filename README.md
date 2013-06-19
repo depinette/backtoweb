@@ -54,13 +54,13 @@ It is not ready yet, but you can [contact us](mailto:depsys@depsys.fr) if you ar
 ### 1. Install mod_fastcgi
 Sadly, OSX Apache Webserver does not come with fastcgi installed
 
-We are using this [homebrew formulae](https://github.com/Homebrew/homebrew-apache) to install it.
+We are using this [homebrew formula](https://github.com/Homebrew/homebrew-apache) to install it.
 
 ```
 brew install https://raw.github.com/Homebrew/homebrew-apache/master/mod_fastcgi.rb
 ```
 
-A common error with this formulae on OSX 10.8 is :
+A common error with this formula on OSX 10.8 is :
 ```
 /usr/share/apr-1/build-1/libtool: line 4574: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/cc: No such file or directory
 ```
@@ -119,7 +119,7 @@ This has two caveats:
 To mitigate the second problem, copy is limited to the /Library/WebServer destination and URL schemes are accepted only from the `open` process (therefore they can not be open via a link in Safari). 
 
 ### 5. Go to http://localhost/hello/world with your favorite browser.
-#### Put a breakpoint in HelloWorldHandler.m, refresh your browser page and debug your server-side code!
+Put a breakpoint in HelloWorldHandler.m, refresh your browser page and debug your server-side code!
 
 
 How does it works
@@ -130,7 +130,7 @@ How does it works
 From your browser to the objective-C code :
 
 ```
-Browser ----send request----> Apache Webserver ---pass request---> mod_fastcgi.so ---launch and pass request---> fastcgiapp.fcgi ---load and pass request---> HelloWorldHandler.bundle
+Browser ----> Apache Webserver ----> mod_fastcgi.so ----> fastcgiapp.fcgi ----> HelloWorldHandler.bundle
 ```
 
 Once executed, the fastcgiapp.fcgi exec will stay in memory and mod_fastcgi will pass requests using sockets (see www.fastcgi.com for details).
