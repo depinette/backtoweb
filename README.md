@@ -2,8 +2,8 @@ backtoweb
 =========
 
 Backtoweb is a simple web framework for Objective-C developer.
-It may be used to create web services and websites.
-It uses a simple handlers mechanism which map a URL path to an Objective-C block.
+
+It uses a simple handler mechanism which map a URL path to an Objective-C block.
 
 In the following example, we are mapping `http://mywebsite/hello/world` to a block which outputs a single text line.
 
@@ -28,7 +28,7 @@ In the following example, we are mapping `http://mywebsite/hello/world` to a blo
 
 Check also the following sample:
 
-* the 'http://localhost/hello/vars' sample to see request parameters 
+* the 'http://localhost/hello/vars' sample to understand how to get request parameters 
 * the 'http://localhost/img' sample to understand how to output a PNG image.
 
 
@@ -36,14 +36,18 @@ Intro
 -----
 
 The current version of the framework will let you test server-side Objective-C using the apache web server integrated in Mac OSX.
+
 It was tested with OSX Mountain Lion.
 
 
 Installation
 ------------
 The installation process described here is for development purpose only.
+
 If you plan to use the framework in production, you should know how to securely configure the Apache Webserver.
+
 If you don't know (or don't want to know) how to configure Apache, note that we may provide a shared hosting offer based on this framework in the future. 
+
 It is not ready yet, but you can [contact us](mailto:depsys@depsys.fr) if you are interested.
 
 
@@ -56,9 +60,12 @@ We are using this [homebrew formulae](https://github.com/Homebrew/homebrew-apach
 brew install https://raw.github.com/Homebrew/homebrew-apache/master/mod_fastcgi.rb
 ```
 
-A common problem with this formulae is :
+A common error with this formulae on OSX 10.8 is :
+```
+/usr/share/apr-1/build-1/libtool: line 4574: /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/cc: No such file or directory
+```
 
-In that case, use the command and retry the brew install ...
+In that case, use the following command and retry the mod_fastcgi install via brew.
 
 ```bash
 $ [ "$(sw_vers -productVersion | sed 's/^\(10\.[0-9]\).*/\1/')" = "10.8" ] && bash -c "[ -d /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain ] && sudo bash -c 'cd /Applications/Xcode.app/Contents/Developer/Toolchains/ && ln -vs XcodeDefault.xctoolchain OSX10.8.xctoolchain' || sudo bash -c 'mkdir -vp /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr && cd /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr && ln -vs /usr/bin'"
@@ -80,30 +87,39 @@ sudo cp ~/Downloads/backtoweb-master/tools/apache2/httpd-b2w.conf /etc/apache2/o
 ```
 
 This file will make Apache load the mod_fastcgi module.
+
 It will also redirects 'directory' requests to our fastcgi app (everything not ending with a file extension).
 
-#### Remark
+#### Remarks
 If you already use the OSX integrated web server for another purpose, please review the config file before using it.
+
 The config file contains a hardcoded path to the mod_fastcgi.so module, so you might want to change it if you haven't use homebrew at step 1.
 
 ### 3. Open the backtoweb workspace with Xcode.
-### 4. Build and run (with the default scheme 'Apache Debug on dev machine')
+Open the backtoweb.xcworkspace file.
+
+### 4. Build and run
+Use the scheme 'Apache Debug on dev machine' (should be the default).
+
 Your admin password will be asked twice:
 * for copying the built files to the Webserver folder.
 * to run the debugger as root in order to attach it to the fastcgi process.
 
 #### Caveats and Security concerns:
 An helper tool called CopyHelper.app is used to copy the files.
+
 You will give admin right to this helper by entering your password.
-Xcode custom build steps communicate with this process via URL scheme. This has two caveats:
+
+Xcode custom build steps communicate with this process via URL scheme.
+
+This has two caveats:
 * A lot of 'open' process will be created and left hanging there until you kill CopyHelper.
 * Any program can use this app to copy file with admin right.
 
-To mitigate the second problem, copy is limited to the /Library/WebServer destination.
-URL schemes are accepted only from the open process (therefore they can not be open via a link in Safari). 
+To mitigate the second problem, copy is limited to the /Library/WebServer destination and URL schemes are accepted only from the `open` process (therefore they can not be open via a link in Safari). 
 
 ### 5. Go to http://localhost/hello/world with your favorite browser.
-#### Put a breakpoint in HelloWorldHandler.m, refresh your browser page and debug !
+#### Put a breakpoint in HelloWorldHandler.m, refresh your browser page and debug your server-side code!
 
 
 How does it works
@@ -112,14 +128,17 @@ How does it works
 ### 1. FastCGI
 
 From your browser to the objective-C code :
-Browser ----send request----> Apache Webserver ---pass request---> mod_fastcgi.so ---launch and pass request---> fastcgiapp.fcgi ---load and pass request---> HelloWorldHandler.bundle 
-and then back using pretty much the same path.
 
-Once executed, the fastcgiapp.fcgi exec will stay in memory and mod_fastcgi will pass requests using sockets (see www.fastcgi.com).
+```
+Browser ----send request----> Apache Webserver ---pass request---> mod_fastcgi.so ---launch and pass request---> fastcgiapp.fcgi ---load and pass request---> HelloWorldHandler.bundle
+```
+
+Once executed, the fastcgiapp.fcgi exec will stay in memory and mod_fastcgi will pass requests using sockets (see www.fastcgi.com for details).
 
 ### 2. Handlers bundles and frameworks.
 
 The Xcode workspace comes with an helper app called CopyHelpers.app which will ask root permissions in order to create folders and copy files.
+
 The resulting arborescence is:
 
 ```
@@ -150,7 +169,7 @@ In order for the help app to do its magic, you need to use the 'Apche Debug on d
 
 The fastcgiapp.fcgi is really just an empty shell. Its purpose is to load the backtoweb.framework which in turn will load the handlers bundle. 
 
-When a HTTP request is provided by the fastcgi framework, the backtoweb framework creates a FCURLRequest object to encapsulate the request parameters and a FCResponseStream object to encapsulate the fastcgi response stream and pass them to the registered handlers.
+When a HTTP request is provided by the fastcgi framework, the backtoweb framework creates a `FCURLRequest` object to encapsulate the request parameters and a `FCResponseStream` object to encapsulate the fastcgi response stream and pass them to the registered handlers.
 
 
 TroubleShooting
