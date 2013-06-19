@@ -153,5 +153,13 @@ The fastcgiapp.fcgi is really just an empty shell. Its purpose is to load the ba
 When a HTTP request is provided by the fastcgi framework, the backtoweb framework creates a FCURLRequest object to encapsulate the request parameters and a FCResponseStream object to encapsulate the fastcgi response stream and pass them to the registered handlers.
 
 
+TroubleShooting
+---------------
+
+#### Upon build and run, Xcode just sits waiting for fastcgiapp.fcgi to launch
+It means that the Apache Web Server failed to launch.
+* Check the Console.app for any http related messages.
+* Check you apache config using `sudo apachectl configtest`
+
 
 
