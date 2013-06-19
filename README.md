@@ -5,7 +5,7 @@ Backtoweb is a simple web framework for Objective-C developer.
 It may be used to create web services and websites.
 It uses a simple handlers mechanism which map a URL path to an Objective-C block.
 
-In the following example, we are mapping `http://mywebsite/hello/world' to a block which outputs a single text line.
+In the following example, we are mapping `http://mywebsite/hello/world` to a block which outputs a single text line.
 
 
 ``` 
