@@ -42,14 +42,14 @@
          //set content type, must send before anything else.
          [responseStream writeValue:@"image/png" forHeader:@"Content-type"];
          
-         /*
-         NSRect bounds = NSMakeRect(0.0, 0.0, 1000.0, 1000.0);
+         
+         NSRect bounds = NSMakeRect(0.0, 0.0, 200.0, 400.0);
          NSImage* anImage = [[NSImage alloc] initWithSize:NSMakeSize(bounds.size.width, bounds.size.height)];
          [anImage lockFocus];
          
          //draw a gradient in a round rect path
          NSBezierPath* path = [NSBezierPath bezierPath];
-         [path appendBezierPathWithRoundedRect:bounds xRadius:40 yRadius:30];
+         [path appendBezierPathWithRoundedRect:bounds xRadius:4*bounds.size.width/100 yRadius:3*bounds.size.width/100];
          
          
          NSGradient* aGradient = [[NSGradient alloc]
@@ -60,7 +60,8 @@
                                   [NSColor greenColor], 0.5f,
                                   [NSColor blueColor], 0.75f,
                                   [NSColor purpleColor], 1.0f,
-                                  nil] ;*/
+                                  nil] ;
+          /*
          NSRect bounds = NSMakeRect(0.0, 0.0, 64.0f, 64.0f);
          NSImage* anImage = [[NSImage alloc] initWithSize:NSMakeSize(bounds.size.width, bounds.size.height)];
          [anImage lockFocus];
@@ -73,8 +74,8 @@
                                   initWithColorsAndLocations:
                                   [NSColor yellowColor], 0.0f,
                                   [NSColor redColor], 1.0f,
-                                  //[NSColor blackColor], 1.0f,
                                   nil] ;
+         */
          
          [aGradient drawInBezierPath:path angle:90.0];
          
