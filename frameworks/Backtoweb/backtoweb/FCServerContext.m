@@ -32,8 +32,20 @@
 
 //TODO remove WEB_ROOT from apache config
 
+static NSString* getRootDir()
+{
+    NSString* path = [[[NSProcessInfo processInfo]environment]objectForKey:@"WEB_ROOT"];
+    if (path == nil)
+    {
+        path = [[[NSProcessInfo processInfo]arguments] objectAtIndex:0];
+        //vhosts/private/<hostname>/cgi-bin/fastcgiapp.fcgi
+        path = [[path pathComponents] objectAtIndex:3];
+        path = [NSString pathWithComponents:@[@"/vhosts/web/", path]];
+    }
+    return path;
+}
 
-#define GET_ROOT_DIR NSHomeDirectory()
+
 static NSString* const kHandlersDir   = @"handlers";
 static NSString* const kDataDir       = @"data";
 static NSString* const kWebDir        = @"www";//or Documents
@@ -55,19 +67,19 @@ static NSString* const kWebDir        = @"www";//or Documents
 
 - (NSString*)handlersDirectory
 {
-    NSString *serverRoot = GET_ROOT_DIR;
+    NSString *serverRoot = getRootDir();
     return [serverRoot stringByAppendingPathComponent:kHandlersDir];
 }
 
 - (NSString*)dataDirectory
 {
-    NSString *serverRoot = GET_ROOT_DIR;
+    NSString *serverRoot = getRootDir();
     return [serverRoot stringByAppendingPathComponent:kDataDir];
 }
 
 - (NSString*)webDirectory
 {
-    NSString *serverRoot = GET_ROOT_DIR;
+    NSString *serverRoot = getRootDir();
     return [serverRoot stringByAppendingPathComponent:kWebDir];
 }
 
