@@ -25,7 +25,7 @@
       location = "container:"
       name = "Handlers">
       <FileRef
-         location = "group:handlers/HelloWorldHandler/HelloWorldHandler.xcodeproj">
+         location = "group:handlers/SamplesHandler/SamplesHandler.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>

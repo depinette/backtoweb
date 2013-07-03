@@ -87,6 +87,64 @@
          return NO;
      }
      forLiteralPath:@"/img" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
-
+    
+    [handlerManager addHandler:^BOOL(FCURLRequest *request, FCResponseStream *responseStream, NSMutableDictionary* context)
+     {
+         CGFloat cx = [[request valueForFormField:@"x"] doubleValue];
+         CGFloat cy = [[request valueForFormField:@"y"] doubleValue];
+         
+         //set content type, must send before anything else.
+         [responseStream writeValue:@"image/png" forHeader:@"Content-type"];
+         
+         
+         NSRect bounds = NSMakeRect(0.0, 0.0, cx, cy);
+         NSImage* anImage = [[NSImage alloc] initWithSize:NSMakeSize(bounds.size.width, bounds.size.height)];
+         [anImage lockFocus];
+         
+         //draw a gradient in a round rect path
+         NSBezierPath* path = [NSBezierPath bezierPath];
+         [path appendBezierPathWithRect:bounds];
+         
+         
+         NSGradient* aGradient = [[NSGradient alloc]
+                                  initWithColorsAndLocations:
+                                  [NSColor redColor], 0.0f,
+                                  [NSColor orangeColor], 0.166f,
+                                  [NSColor yellowColor], 0.33f,
+                                  [NSColor greenColor], 0.5f,
+                                  [NSColor blueColor], 0.75f,
+                                  [NSColor purpleColor], 1.0f,
+                                  nil] ;
+         
+         [aGradient drawInBezierPath:path angle:0.0];
+         
+         NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0, 0, anImage.size.width, anImage.size.height)];
+         [anImage unlockFocus];
+         
+         [responseStream writeData:[bitmapRep representationUsingType:NSPNGFileType properties:nil]];
+         
+         return NO;
+     }
+     forLiteralPath:@"/img2" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
+    
+    [handlerManager addHandler:^BOOL(FCURLRequest *request, FCResponseStream *responseStream, NSMutableDictionary* context)
+     {
+         NSURLResponse* response;
+         NSError* error;
+         NSString* id = [request valueForFormField:@"id"];
+         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://gist.github.com/depinette/%@/raw", id]];
+         NSData* data = [NSURLConnection sendSynchronousRequest:[[NSURLRequest alloc] initWithURL:url] returningResponse:&response error:&error];
+         if (data)
+         {
+             [responseStream writeValue:@"text/plain" forHeader:@"Content-type"];
+             [responseStream writeData:data];
+         }
+         else
+         {
+             [responseStream writeString:@"An error occured... Sorry about that."];
+         }
+         return NO;
+     }
+     forLiteralPath:@"/source" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
 }
 @end

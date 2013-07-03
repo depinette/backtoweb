@@ -16,11 +16,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1397A3EC177093E60018DB75 /* HelloWorldHandler.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldHandler.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1397A3EC177093E60018DB75 /* SamplesHandler.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplesHandler.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1397A3EF177093E60018DB75 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		1397A3F3177093E60018DB75 /* HelloWorldHandler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorldHandler-Info.plist"; sourceTree = "<group>"; };
+		1397A3F3177093E60018DB75 /* SamplesHandler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SamplesHandler-Info.plist"; sourceTree = "<group>"; };
 		1397A3F5177093E60018DB75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1397A3F7177093E60018DB75 /* HelloWorldHandler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorldHandler-Prefix.pch"; sourceTree = "<group>"; };
+		1397A3F7177093E60018DB75 /* SamplesHandler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SamplesHandler-Prefix.pch"; sourceTree = "<group>"; };
 		1397A3FD1770943A0018DB75 /* HelloWorldHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldHandler.h; sourceTree = "<group>"; };
 		1397A3FE1770943A0018DB75 /* HelloWorldHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldHandler.m; sourceTree = "<group>"; };
 		13CBDCF1177099540025103B /* ImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHandler.h; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		1397A3E3177093E60018DB75 = {
 			isa = PBXGroup;
 			children = (
-				1397A3F1177093E60018DB75 /* HelloWorldHandler */,
+				1397A3F1177093E60018DB75 /* SamplesHandler */,
 				1397A3EE177093E60018DB75 /* Frameworks */,
 				1397A3ED177093E60018DB75 /* Products */,
 			);
@@ -55,7 +55,7 @@
 		1397A3ED177093E60018DB75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1397A3EC177093E60018DB75 /* HelloWorldHandler.bundle */,
+				1397A3EC177093E60018DB75 /* SamplesHandler.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1397A3F1177093E60018DB75 /* HelloWorldHandler */ = {
+		1397A3F1177093E60018DB75 /* SamplesHandler */ = {
 			isa = PBXGroup;
 			children = (
 				1397A3FD1770943A0018DB75 /* HelloWorldHandler.h */,
@@ -79,15 +79,15 @@
 				13CBDCF2177099540025103B /* ImageHandler.m */,
 				1397A3F2177093E60018DB75 /* Supporting Files */,
 			);
-			path = HelloWorldHandler;
+			path = SamplesHandler;
 			sourceTree = "<group>";
 		};
 		1397A3F2177093E60018DB75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1397A3F3177093E60018DB75 /* HelloWorldHandler-Info.plist */,
+				1397A3F3177093E60018DB75 /* SamplesHandler-Info.plist */,
 				1397A3F4177093E60018DB75 /* InfoPlist.strings */,
-				1397A3F7177093E60018DB75 /* HelloWorldHandler-Prefix.pch */,
+				1397A3F7177093E60018DB75 /* SamplesHandler-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1397A3EB177093E60018DB75 /* HelloWorldHandler */ = {
+		1397A3EB177093E60018DB75 /* SamplesHandler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1397A3FA177093E70018DB75 /* Build configuration list for PBXNativeTarget "HelloWorldHandler" */;
+			buildConfigurationList = 1397A3FA177093E70018DB75 /* Build configuration list for PBXNativeTarget "SamplesHandler" */;
 			buildPhases = (
 				1397A3E8177093E60018DB75 /* Sources */,
 				1397A3E9177093E60018DB75 /* Frameworks */,
@@ -107,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWorldHandler;
+			name = SamplesHandler;
 			productName = HelloWorldHandler;
-			productReference = 1397A3EC177093E60018DB75 /* HelloWorldHandler.bundle */;
+			productReference = 1397A3EC177093E60018DB75 /* SamplesHandler.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = depsys;
 			};
-			buildConfigurationList = 1397A3E7177093E60018DB75 /* Build configuration list for PBXProject "HelloWorldHandler" */;
+			buildConfigurationList = 1397A3E7177093E60018DB75 /* Build configuration list for PBXProject "SamplesHandler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1397A3EB177093E60018DB75 /* HelloWorldHandler */,
+				1397A3EB177093E60018DB75 /* SamplesHandler */,
 			);
 		};
 /* End PBXProject section */
@@ -241,10 +241,10 @@
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorldHandler/HelloWorldHandler-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorldHandler/HelloWorldHandler-Info.plist";
+				GCC_PREFIX_HEADER = "HelloWorldHandler/SamplesHandler-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorldHandler/SamplesHandler-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SamplesHandler;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -258,10 +258,10 @@
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorldHandler/HelloWorldHandler-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorldHandler/HelloWorldHandler-Info.plist";
+				GCC_PREFIX_HEADER = "HelloWorldHandler/SamplesHandler-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorldHandler/SamplesHandler-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SamplesHandler;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -269,7 +269,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1397A3E7177093E60018DB75 /* Build configuration list for PBXProject "HelloWorldHandler" */ = {
+		1397A3E7177093E60018DB75 /* Build configuration list for PBXProject "SamplesHandler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1397A3F8177093E70018DB75 /* Debug */,
@@ -278,7 +278,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1397A3FA177093E70018DB75 /* Build configuration list for PBXNativeTarget "HelloWorldHandler" */ = {
+		1397A3FA177093E70018DB75 /* Build configuration list for PBXNativeTarget "SamplesHandler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1397A3FB177093E70018DB75 /* Debug */,
