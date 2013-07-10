@@ -49,6 +49,7 @@ static NSString* getRootDir()
 static NSString* const kHandlersDir   = @"handlers";
 static NSString* const kDataDir       = @"data";
 static NSString* const kWebDir        = @"www";//or Documents
+static NSString* const kLogsDir        = @"logs";
 //static NSString* const kFrameworksDir = @"frameworks";
 
 
@@ -81,6 +82,12 @@ static NSString* const kWebDir        = @"www";//or Documents
 {
     NSString *serverRoot = getRootDir();
     return [serverRoot stringByAppendingPathComponent:kWebDir];
+}
+
+- (NSString*)logsDirectory
+{
+    NSString *serverRoot = getRootDir();
+    return [serverRoot stringByAppendingPathComponent:kLogsDir];
 }
 
 @end

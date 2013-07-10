@@ -36,5 +36,6 @@
 - (NSString*)handlersDirectory;
 - (NSString*)dataDirectory;
 - (NSString*)webDirectory;
+- (NSString*)logsDirectory;
 
 @end
