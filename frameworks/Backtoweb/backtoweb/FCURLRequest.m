@@ -98,7 +98,6 @@ static NSCharacterSet* querySeparators = nil;
 
 - (id)initWithRequest:(FCGX_Request*)pRequest
 {
-    ddLogLevel = LOG_LEVEL_VERBOSE;
     NSString* queryString = getParamNoUnescape(pRequest, @"QUERY_STRING");
     NSString* scriptUri   = getParamNoUnescape(pRequest, @"SCRIPT_URI");
     NSString* requestURL = nil;
