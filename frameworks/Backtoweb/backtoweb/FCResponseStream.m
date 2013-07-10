@@ -109,6 +109,22 @@
     }];
 }
 
+//write Cache-Control + Expires headers
+//http://blog.mro.name/2009/08/nsdateformatter-http-header/
+-(void)writeHeadersForCacheDuration:(NSUInteger)seconds
+{
+    static NSDateFormatter *dateFormatter = nil;
+    [self writeValue:[NSString stringWithFormat:@"max-age=%lu", seconds] forHeader:@"Cache-Control"];
+    if(dateFormatter == nil)
+    {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] ;
+        dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+        dateFormatter.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'";
+    }
+    [self writeValue:[dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:seconds]] forHeader:@"Expires"];
+}
+
 static NSArray* orderedHeaders = nil;
 static const int nborderedHeaders = 28;
 //sort Headers according to "good practice" in spec

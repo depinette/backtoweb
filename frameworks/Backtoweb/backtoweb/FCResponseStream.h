@@ -40,6 +40,7 @@
 - (void)writeValue:(NSString*)value forHeader:(NSString*)header;
 - (void)writeHeaders:(NSDictionary*)headers;
 - (void)sortAndWriteHeaders:(NSDictionary*)headers;
+- (void)writeHeadersForCacheDuration:(NSUInteger)seconds;
 
 //reponse content
 - (NSInteger)write:(const uint8_t *)buffer maxLength:(NSUInteger)len;
