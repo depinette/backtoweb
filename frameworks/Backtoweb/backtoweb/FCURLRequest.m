@@ -313,7 +313,7 @@ char *pValue = FCGX_GetParam([@"CONTENT_TYPE" cStringUsingEncoding:NSASCIIString
         if (field && [field.value hasPrefix:@"application/x-www-form-urlencoded"])
         {
             //no charset= parameter in the content-type, so the encoding should be specified in a hidden field
-            queryString = [[NSString alloc] initWithData:[self HTTPBody] encoding:NSASCIIStringEncoding];
+            queryString = [[[NSString alloc] initWithData:[self HTTPBody] encoding:NSASCIIStringEncoding] stringByReplacingOccurrencesOfString:@"+" withString:@" "];
         }
         else
             queryString = getParamNoUnescape(fcgiRequest, @"QUERY_STRING");
