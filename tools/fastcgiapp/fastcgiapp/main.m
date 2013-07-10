@@ -29,6 +29,7 @@
 #import <Foundation/Foundation.h>
 #import <Lumberjack/DDASLLogger.h>
 #import <Lumberjack/DDTTYLogger.h>
+#import <Lumberjack/DDFileLogger.h>
 #import <backtoweb/backtoweb.h>
 #import <backtoweb/FCURLRequestPrivate.h>
 #import <backtoweb/FCHandlerManagerPrivate.h>
@@ -39,10 +40,22 @@ int main(int argc, const char * argv[])
 {
     @autoreleasepool
     {
-        //logs
+        //setup logs
         //[DDLog addLogger:[DDASLLogger sharedInstance]];//Console
-        [DDLog addLogger:[DDTTYLogger sharedInstance]];//NSLog
+        //[DDLog addLogger:[DDTTYLogger sharedInstance]];//NSLog
+        DDLogFileManagerDefault *fileManager = [[DDLogFileManagerDefault alloc] initWithLogsDirectory:[[FCServerContext sharedInstance] logsDirectory]];
+        __strong DDFileLogger *fileLogger = [[DDFileLogger alloc] initWithLogFileManager:fileManager];
+        [fileLogger setMaximumFileSize:(1024 * 1024)];
+        [fileLogger setRollingFrequency:(3600.0 * 24.0)];
+        [[fileLogger logFileManager] setMaximumNumberOfLogFiles:7];
+        [DDLog addLogger:fileLogger];
+
+        
+#ifdef DEBUG
         ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+        ddLogLevel = ddDefaultLogLevel;
+#endif
         /*
         NSString* path = [[NSString alloc] initWithCString:argv[0] encoding:NSUTF8StringEncoding];
         path = [[path stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];
