@@ -241,8 +241,8 @@
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorldHandler/SamplesHandler-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorldHandler/SamplesHandler-Info.plist";
+				GCC_PREFIX_HEADER = "SamplesHandler/SamplesHandler-Prefix.pch";
+				INFOPLIST_FILE = "SamplesHandler/SamplesHandler-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = SamplesHandler;
 				WRAPPER_EXTENSION = bundle;
@@ -258,8 +258,8 @@
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorldHandler/SamplesHandler-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorldHandler/SamplesHandler-Info.plist";
+				GCC_PREFIX_HEADER = "SamplesHandler/SamplesHandler-Prefix.pch";
+				INFOPLIST_FILE = "SamplesHandler/SamplesHandler-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = SamplesHandler;
 				WRAPPER_EXTENSION = bundle;

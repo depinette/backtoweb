@@ -40,7 +40,7 @@
 
             return NO; //do not try to find another handler
         }
-     forLiteralPath:@"/hello/world" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
+     forLiteralPath:@"/samples/hello/world" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
     
     [handlerManager
         addHandler:^BOOL(FCURLRequest *request, FCResponseStream *responseStream, NSMutableDictionary* context)
@@ -71,7 +71,7 @@
                          
             return NO; //do not try to find another handler
         }
-     forLiteralPath:@"/hello/vars" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
+     forLiteralPath:@"/samples/hello/vars" pathType:FCPathTypeURLPath priority:FCHandlerPriorityNormal];
 }
 @end
 
