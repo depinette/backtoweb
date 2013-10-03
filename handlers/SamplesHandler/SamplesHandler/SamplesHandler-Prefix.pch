@@ -5,8 +5,7 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
     #import <Lumberjack/Lumberjack.h>
-//default logLevel
-static const int ddDefaultLogLevel = LOG_LEVEL_WARN;
-//dynamically overridable loglevel
-static int ddLogLevel = ddDefaultLogLevel;
+
+    static int ddLogLevel = LOG_LEVEL_WARN;
+#pragma unused(ddLogLevel)
 #endif

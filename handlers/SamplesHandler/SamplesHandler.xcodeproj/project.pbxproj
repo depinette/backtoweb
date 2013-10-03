@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13141C441794012A00D31310 /* EmojiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 13141C431794012A00D31310 /* EmojiHandler.m */; };
+		13831BBF179EB7B90020A19C /* Backtoweb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13831BBD179EB7B00020A19C /* Backtoweb.framework */; };
+		1384D904179FC38500CD5ADD /* CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1384D903179FC38500CD5ADD /* CoreDataHandler.m */; };
+		1384D90A17A002F700CD5ADD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1384D90917A002F700CD5ADD /* CoreData.framework */; };
 		1397A3F0177093E60018DB75 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397A3EF177093E60018DB75 /* CoreFoundation.framework */; };
 		1397A3F6177093E60018DB75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1397A3F4177093E60018DB75 /* InfoPlist.strings */; };
 		1397A3FF1770943A0018DB75 /* HelloWorldHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1397A3FE1770943A0018DB75 /* HelloWorldHandler.m */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13141C421794012A00D31310 /* EmojiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiHandler.h; sourceTree = "<group>"; };
+		13141C431794012A00D31310 /* EmojiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiHandler.m; sourceTree = "<group>"; };
+		13831BBD179EB7B00020A19C /* Backtoweb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Backtoweb.framework; path = "../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Release/Backtoweb.framework"; sourceTree = "<group>"; };
+		1384D902179FC38500CD5ADD /* CoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHandler.h; sourceTree = "<group>"; };
+		1384D903179FC38500CD5ADD /* CoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHandler.m; sourceTree = "<group>"; };
+		1384D90917A002F700CD5ADD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1397A3EC177093E60018DB75 /* SamplesHandler.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplesHandler.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1397A3EF177093E60018DB75 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1397A3F3177093E60018DB75 /* SamplesHandler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SamplesHandler-Info.plist"; sourceTree = "<group>"; };
@@ -34,8 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13831BBF179EB7B90020A19C /* Backtoweb.framework in Frameworks */,
 				13CBDCFD17709B190025103B /* Lumberjack.framework in Frameworks */,
 				13CBDCFC17709B0A0025103B /* AppKit.framework in Frameworks */,
+				1384D90A17A002F700CD5ADD /* CoreData.framework in Frameworks */,
 				1397A3F0177093E60018DB75 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +75,8 @@
 		1397A3EE177093E60018DB75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1384D90917A002F700CD5ADD /* CoreData.framework */,
+				13831BBD179EB7B00020A19C /* Backtoweb.framework */,
 				13CBDCFA17709ADD0025103B /* AppKit.framework */,
 				13CBDCF417709A720025103B /* Lumberjack.framework */,
 				1397A3EF177093E60018DB75 /* CoreFoundation.framework */,
@@ -77,6 +91,10 @@
 				1397A3FE1770943A0018DB75 /* HelloWorldHandler.m */,
 				13CBDCF1177099540025103B /* ImageHandler.h */,
 				13CBDCF2177099540025103B /* ImageHandler.m */,
+				13141C421794012A00D31310 /* EmojiHandler.h */,
+				13141C431794012A00D31310 /* EmojiHandler.m */,
+				1384D902179FC38500CD5ADD /* CoreDataHandler.h */,
+				1384D903179FC38500CD5ADD /* CoreDataHandler.m */,
 				1397A3F2177093E60018DB75 /* Supporting Files */,
 			);
 			path = SamplesHandler;
@@ -156,6 +174,8 @@
 			files = (
 				1397A3FF1770943A0018DB75 /* HelloWorldHandler.m in Sources */,
 				13CBDCF3177099540025103B /* ImageHandler.m in Sources */,
+				13141C441794012A00D31310 /* EmojiHandler.m in Sources */,
+				1384D904179FC38500CD5ADD /* CoreDataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +259,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SamplesHandler/SamplesHandler-Prefix.pch";
@@ -256,6 +277,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Release\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SamplesHandler/SamplesHandler-Prefix.pch";
