@@ -102,7 +102,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 
 -(BOOL)respondsToRequest:(FCURLRequest*)request
 {
-    BOOL bRulePassed = NO;
+    __block BOOL bRulePassed = NO;
     
     if (ruleType == FCRuleTypeNone)
     {
@@ -133,11 +133,17 @@ static int ddLogLevel = LOG_LEVEL_WARN;
             {
                 if (self.regex)
                 {
-                    NSUInteger numberOfMatches = [self.regex numberOfMatchesInString:urlString
-                                                                             options:0
-                                                                               range:NSMakeRange(0, [urlString length])];
-                    if (numberOfMatches > 0)
-                        bRulePassed = YES;
+                    NSRange range = NSMakeRange(0, [urlString length]);
+                    [self.regex enumerateMatchesInString:urlString options:0 range:range
+                                              usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop)
+                    {
+                        if (NSEqualRanges(range, result.range))
+                        {
+                            bRulePassed = YES;
+                            *stop = YES;
+                        }
+                    }];
+                        
                 }
             }
             else if (ruleType == FCRuleTypeLiteral && rule)
