@@ -33,7 +33,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FCResponseStream : NSObject
+@interface FCResponseStream : NSOutputStream
 @property(assign, nonatomic) BOOL alwaysFlush;
 
 //response header

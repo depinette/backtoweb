@@ -172,6 +172,12 @@ static const int nborderedHeaders = 28;
     }
 }
 
+- (void)writeData:(NSData*)data
+{
+    [self write:[data bytes] maxLength:[data length]];
+}
+
+#pragma mark NSOutputStream override
 - (NSInteger)write:(const uint8_t *)buffer maxLength:(NSUInteger)len
 {
     assert(len <= INT_MAX); //please write less than INT_MAX bytes
@@ -199,11 +205,36 @@ static const int nborderedHeaders = 28;
     return ret;
 }
 
-- (void)writeData:(NSData*)data
+- (BOOL)hasSpaceAvailable
 {
-    [self write:[data bytes] maxLength:[data length]];
+    return YES;
 }
 
-
+- (NSStreamStatus)streamStatus
+{
+    NSStreamStatus status = NSStreamStatusError;
+    int error = FCGX_GetError(outStream);
+    switch(error)
+    {
+        case 0:
+            status = NSStreamStatusOpen;
+            break;
+        default:
+        case FCGX_UNSUPPORTED_VERSION:
+        case FCGX_PROTOCOL_ERROR:
+        case FCGX_PARAMS_ERROR:
+        case FCGX_CALL_SEQ_ERROR:
+            status = NSStreamStatusError;
+            break;
+    };
+    return status;
+}
+- (NSError*)streamError
+{
+    int error = FCGX_GetError(outStream);
+    if (error == 0)
+        return nil;
+    return[NSError errorWithDomain:@"backtoweb" code:error userInfo:nil];
+}
 #pragma mark -
 @end
