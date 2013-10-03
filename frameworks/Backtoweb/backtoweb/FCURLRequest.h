@@ -10,10 +10,11 @@
 - (NSString *)valueForHTTPHeaderField:(NSString *)field;
 - (NSDictionary *)allHTTPHeaderFields;
 
-- (NSString*)valueForFormField:(NSString*)field;
+- (id)valueForFormField:(NSString*)field;
 - (NSDictionary*)allFormFields;
 
 - (NSString *)HTTPMethod;
 
 - (NSURL *)URL;
+
 @end

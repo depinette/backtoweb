@@ -78,7 +78,7 @@ static NSCharacterSet* querySeparators = nil;
     __strong NSURL* url;
     __strong NSMutableData* httpBody;
     __strong NSInputStream *httpBodyStream;
-    __strong NSDictionary *postFormParams;
+    __strong NSMutableDictionary *postFormParams;
     __strong NSFileHandle* attachementHandle;
 }
 
@@ -268,7 +268,7 @@ static NSCharacterSet* querySeparators = nil;
 #pragma mark -
 #pragma mark Form Support
 
-- (NSString*)valueForFormField:(NSString*)field
+- (id)valueForFormField:(NSString*)field
 {
     NSDictionary* dico = [self allFormFieldsWithEncoding:NSUTF8StringEncoding];
     return [dico valueForKey:field];
@@ -326,14 +326,87 @@ char *pValue = FCGX_GetParam([@"CONTENT_TYPE" cStringUsingEncoding:NSASCIIString
                 postFormParams = [NSMutableDictionary dictionaryWithCapacity:nbKeys];
                 for (NSUInteger i=0; i < nbKeys; i++)
                 {
-                    [postFormParams setValue:[[keysvalues objectAtIndex:2*i+1] stringByReplacingPercentEscapesUsingEncoding:encoding]
-                                      forKey:[[keysvalues objectAtIndex:2*i] stringByReplacingPercentEscapesUsingEncoding:encoding]];
+                    NSString* key = [[keysvalues objectAtIndex:2*i] stringByReplacingPercentEscapesUsingEncoding:encoding];
+                    NSString* value = [[keysvalues objectAtIndex:2*i+1] stringByReplacingPercentEscapesUsingEncoding:encoding];
+                    if ([key characterAtIndex:key.length-1] == ']')
+                    {
+                        //array or dico
+                        //1 transform var[][key1][key2] -> var,,key1,key2
+                        key = [key stringByReplacingOccurrencesOfString:@"[" withString:@","];
+                        key = [key stringByReplacingOccurrencesOfString:@"]" withString:@""];
+                        NSMutableArray *keys = [[NSMutableArray alloc] initWithArray:[key componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]]];
+                        SetContainerRecursively(postFormParams, keys, value);
+                    }
+                    else
+                    {
+                        [postFormParams setValue:value
+                                      forKey:key];
+                    }
                 }
             }
         }
     }
     
     return postFormParams;
+}
+
+void SetContainerRecursively(NSMutableDictionary* container, NSMutableArray* keys, NSString* value)
+{
+    NSString* key = [keys objectAtIndex:0];
+    id nextContainer = nil;
+    if (key.length>0)
+        nextContainer = [container objectForKey:key];
+    [keys removeObjectAtIndex:0];
+    
+    if (keys.count == 0)
+    {
+        assert(nextContainer == nil);
+        [container setValue:value forKey:key];
+    }
+    else
+    {
+        if (nextContainer == nil)
+        {
+            NSString* nextKey = [keys objectAtIndex:0];
+            if (nextKey.length>0)
+                nextContainer = [NSMutableDictionary new];
+            else
+                nextContainer = [NSMutableArray new];
+            [container setObject:nextContainer forKey:key];
+        }
+        
+        if ([nextContainer isKindOfClass:NSMutableDictionary.class])
+            SetContainerRecursively(nextContainer, keys, value);
+        else
+            PushContainerRecursively(nextContainer, keys, value);
+    }
+}
+
+void PushContainerRecursively(NSMutableArray* container, NSMutableArray* keys, NSString* value)
+{
+    NSString* key = [keys objectAtIndex:0];
+    id nextContainer = nil;
+    assert(key.length==0);
+    [keys removeObjectAtIndex:0];
+    nextContainer = [container lastObject];
+    
+    if (keys.count == 0)
+    {
+        if (nextContainer && [nextContainer isKindOfClass:NSMutableDictionary.class])
+            [nextContainer setValue:value forKey:key];
+        else
+            [container addObject:value];
+    }
+    else
+    {
+        NSString* nextKey = [keys objectAtIndex:0];
+        if (!nextContainer || [nextContainer objectForKey:nextKey] != nil )
+        {
+            nextContainer = [NSMutableDictionary new];
+            [container addObject:nextContainer];
+        }
+        SetContainerRecursively(nextContainer, keys, value);
+    }
 }
 
 #pragma mark-
