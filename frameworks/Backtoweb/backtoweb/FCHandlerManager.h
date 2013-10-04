@@ -57,6 +57,6 @@ typedef NSUInteger FCPathType;
 - (void)addHandler:(REQUEST_HANDLER_BLOCK)block forRegexPath:(NSString*)regexPath pathType:(FCPathType)pathType priority:(FCHandlerPriority)priority;
 - (void)addHandler:(REQUEST_HANDLER_BLOCK)block forLiteralPath:(NSString*)literalPath pathType:(FCPathType)pathType priority:(FCHandlerPriority)priority;
 - (void)addHandlerItem:(id<FCHandlerItemProtocol>)handlerItem;
-
+-(BOOL)hasHandler:(id)handlerItem;
 - (void)removeHandler:(id)handlerItem;
 @end

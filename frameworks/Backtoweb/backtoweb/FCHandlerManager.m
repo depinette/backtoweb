@@ -226,6 +226,18 @@
 }
 
 
+-(BOOL)hasHandler:(id)handlerItem
+{
+    BOOL b = NO;
+    [handlersLock lock];
+    if ([self.requestHandlers indexOfObject:handlerItem] != NSNotFound)
+    {
+        b = YES;
+    }
+    [handlersLock unlock];
+    return b;
+}
+
 -(void)removeHandler:(id)handlerItem
 {
     [handlersLock lock];
