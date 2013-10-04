@@ -3,7 +3,9 @@ backtoweb
 
 Backtoweb is a simple web framework for Objective-C developer.
 
-It uses a simple handler mechanism which map a URL path to an Objective-C block.
+It uses a simple handler mechanism which map an URL path to an Objective-C block.
+
+Check out the [samples](http://backtoweb.net/samples.html).
 
 In the following example, we are mapping `http://mywebsite/hello/world` to a block which outputs a single text line.
 
@@ -26,12 +28,6 @@ In the following example, we are mapping `http://mywebsite/hello/world` to a blo
 
 ```
 
-Check also the following sample:
-
-* the 'http://localhost/hello/vars' sample to understand how to get request parameters 
-* the 'http://localhost/img' sample to understand how to output a PNG image.
-
-
 Intro
 -----
 
@@ -46,13 +42,10 @@ The installation process described here is for development purpose only.
 
 If you plan to use the framework in production, you should know how to securely configure the Apache Webserver.
 
-If you don't know (or don't want to know) how to configure Apache, note that we may provide a shared hosting offer based on this framework in the future. 
-
-It is not ready yet, but you can [contact us](mailto:depsys@depsys.fr) if you are interested.
-
 
 ### 1. Install mod_fastcgi
-Sadly, OSX Apache Webserver does not come with fastcgi installed
+Sadly, OSX Apache Webserver does not come with fastcgi installed.
+This is the only tricky step.
 
 We are using this [homebrew formula](https://github.com/Homebrew/homebrew-apache) to install it.
 
@@ -86,12 +79,12 @@ For example :
 sudo cp ~/Downloads/backtoweb-master/tools/apache2/httpd-b2w.conf /etc/apache2/other/
 ```
 
+#### Remarks
+If you already use the OSX integrated web server for another purpose, please review the config file before using it.
+
 This file will make Apache load the mod_fastcgi module.
 
 It will also redirects 'directory' requests to our fastcgi app (everything not ending with a file extension).
-
-#### Remarks
-If you already use the OSX integrated web server for another purpose, please review the config file before using it.
 
 The config file contains a hardcoded path to the mod_fastcgi.so module, so you might want to change it if you haven't use homebrew at step 1.
 
