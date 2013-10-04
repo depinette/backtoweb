@@ -24,11 +24,8 @@
  *
  ***********************************************************************************/
 //  FSResponseStream.m
-//  fastcgitest
-//
 
-//
-//
+static int ddLogLevel = LOG_LEVEL_WARN;
 
 //TODO TEST
 //- (void)writeHeaders:(NSDictionary*)headers

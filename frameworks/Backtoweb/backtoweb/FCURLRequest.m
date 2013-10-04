@@ -27,8 +27,7 @@
 //  fastcgitest
 //
 
-//
-//
+static int ddLogLevel = LOG_LEVEL_WARN;
 
 #import "FCURLRequest.h"
 #import "FCURLRequestPrivate.h"

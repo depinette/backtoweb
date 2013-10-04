@@ -7,11 +7,12 @@
 #pragma mark log level
 /*
 #ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static int ddLogLevel = LOG_LEVEL_WARN;
 #else
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static int ddLogLevel = LOG_LEVEL_WARN;
 #endif
 */
+static int ddLogLevel = LOG_LEVEL_WARN;
 
 //-----------------------------------------------------------------
 // interface MultipartFormDataParser (private)
@@ -35,7 +36,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 //-----------------------------------------------------------------
 // implementation MultipartFormDataParser
 //-----------------------------------------------------------------
-
 
 @implementation MultipartFormDataParser 
 @synthesize delegate,formEncoding;

@@ -34,6 +34,13 @@
 #import <backtoweb/FCURLRequestPrivate.h>
 #import <backtoweb/FCHandlerManagerPrivate.h>
 
+
+#ifdef DEBUG
+int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+int ddLogLevel = LOG_LEVEL_WARN;
+#endif
+
 //NSLog goes in apache error log: file://private/var/log/apache2/error_log
 
 int main(int argc, const char * argv[])
@@ -41,8 +48,8 @@ int main(int argc, const char * argv[])
     @autoreleasepool
     {
         //setup logs
-        //[DDLog addLogger:[DDASLLogger sharedInstance]];//Console
-        //[DDLog addLogger:[DDTTYLogger sharedInstance]];//NSLog
+        //[DDLog addLogger:[DDASLLogger sharedInstance]];//Console (Apple System Log)
+        [DDLog addLogger:[DDTTYLogger sharedInstance]];//NSLog
         DDLogFileManagerDefault *fileManager = [[DDLogFileManagerDefault alloc] initWithLogsDirectory:[[FCServerContext sharedInstance] logsDirectory]];
         __strong DDFileLogger *fileLogger = [[DDFileLogger alloc] initWithLogFileManager:fileManager];
         [fileLogger setMaximumFileSize:(1024 * 1024)];
@@ -50,12 +57,6 @@ int main(int argc, const char * argv[])
         [[fileLogger logFileManager] setMaximumNumberOfLogFiles:7];
         [DDLog addLogger:fileLogger];
 
-        
-#ifdef DEBUG
-        ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-        ddLogLevel = ddDefaultLogLevel;
-#endif
         /*
         NSString* path = [[NSString alloc] initWithCString:argv[0] encoding:NSUTF8StringEncoding];
         path = [[path stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];

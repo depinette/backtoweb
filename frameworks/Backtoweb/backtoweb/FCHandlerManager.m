@@ -31,6 +31,8 @@
 //thread safe classes
 //https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Multithreading/ThreadSafetySummary/ThreadSafetySummary.html
 
+static int ddLogLevel = LOG_LEVEL_WARN;
+
 #import "FCHandlerManager.h"
 #import "FCHandlerManagerPrivate.h"
 #import <objc/runtime.h>
@@ -63,7 +65,6 @@
 
 -(id)init
 {
-    ddLogLevel = LOG_LEVEL_INFO;
     if (self = [super init])
     {
         self.requestHandlers = [NSMutableArray array];
@@ -142,6 +143,7 @@
         //let the request handler register their handler block
         for (int i = 0; i < numHandlerClass; i++)
         {
+            DDLogVerbose(@"handler class %@",  NSStringFromClass(handlerClasses[i]));
             [handlerClasses[i] initializeHandlers:self];
         }
     }
@@ -221,6 +223,7 @@
          else
              *stop = NO;
      }];
+    DDLogVerbose(@"insertHandler %@ at %lu",handlerItem, index);
     [self.requestHandlers insertObject:handlerItem atIndex:index];
     [handlersLock unlock];
 }

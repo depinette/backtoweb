@@ -10,6 +10,8 @@
 #import "FCResponseStream.h"
 #import <Lumberjack/Lumberjack.h>
 
+static int ddLogLevel = LOG_LEVEL_WARN;
+
 @implementation FCHTMLTemplate
 {
     __strong NSMutableArray* ranges;

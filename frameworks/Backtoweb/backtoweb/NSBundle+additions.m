@@ -30,12 +30,14 @@
 //  Copyright (c) 2013 David EPINETTE. All rights reserved.
 //
 
+static int ddLogLevel = LOG_LEVEL_WARN;
+
 #import "NSBundle+additions.h"
+#import "FCHandlerItemPrivate.h"
 
 @implementation NSBundle (additions)
 +(NSBundle*)loadBundle:(NSString*)fullPath
 {
-    //    NSString *fullPath = @"/Library/WebServer/dummy-host.com/www/myBundle/build/Release/myBundle.bundle"; // Assume this exists.
     NSBundle *bundle = nil;
     bundle = [NSBundle bundleWithPath:fullPath];
     if (bundle)

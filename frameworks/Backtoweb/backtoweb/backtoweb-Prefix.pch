@@ -5,10 +5,5 @@
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #import <Lumberjack/DDLog.h>
-
-//default logLevel
-static const int ddDefaultLogLevel = LOG_LEVEL_WARN;
-//dynamically overridable loglevel
-static int ddLogLevel = ddDefaultLogLevel;
 #endif
 

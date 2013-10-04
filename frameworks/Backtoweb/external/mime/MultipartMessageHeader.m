@@ -12,12 +12,14 @@
 //-----------------------------------------------------------------
 #pragma mark log level
 /*
-#ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_WARN;
-#else
-static const int ddLogLevel = LOG_LEVEL_WARN;
-#endif
-*/
+ #ifdef DEBUG
+ static int ddLogLevel = LOG_LEVEL_WARN;
+ #else
+ static int ddLogLevel = LOG_LEVEL_WARN;
+ #endif
+ */
+static int ddLogLevel = LOG_LEVEL_WARN;
+
 //-----------------------------------------------------------------
 // implementation MultipartMessageHeader
 //-----------------------------------------------------------------
@@ -25,7 +27,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 @implementation MultipartMessageHeader
 @synthesize fields,encoding;
-
 
 - (id) initWithData:(NSData *)data formEncoding:(NSStringEncoding) formEncoding {
 	if( nil == (self = [super init]) ) {

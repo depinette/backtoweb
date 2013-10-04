@@ -80,6 +80,7 @@ static NSString* const kLogsDir        = @"logs";
 
 - (NSString*)webDirectory
 {
+    //prefer DocRoot as it works in dev environnement. NSString* docRoot = [request valueForHTTPHeaderField:@"DOCUMENT_ROOT"];
     NSString *serverRoot = getRootDir();
     return [serverRoot stringByAppendingPathComponent:kWebDir];
 }
