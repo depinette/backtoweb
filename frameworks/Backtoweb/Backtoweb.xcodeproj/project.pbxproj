@@ -11,7 +11,7 @@
 		13236342174BA6BA00F52335 /* FCServerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 13236340174BA6BA00F52335 /* FCServerContext.m */; };
 		135965851785FA57006332D2 /* FCHTMLTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 135965831785FA57006332D2 /* FCHTMLTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		135965861785FA57006332D2 /* FCHTMLTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 135965841785FA57006332D2 /* FCHTMLTemplate.m */; };
-		13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC3D5F178D505700D091E4 /* NSString+Backtoweb.h */; };
+		13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC3D5F178D505700D091E4 /* NSString+Backtoweb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC3D62178D505700D091E4 /* NSString+Backtoweb.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC3D60178D505700D091E4 /* NSString+Backtoweb.m */; };
 		13D49D30172BFABC003E7240 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D2F172BFABC003E7240 /* Cocoa.framework */; };
 		13D49D3A172BFABC003E7240 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13D49D38172BFABC003E7240 /* InfoPlist.strings */; };
@@ -317,6 +317,7 @@
 				13D49D8A172BFDED003E7240 /* DDData.h in Headers */,
 				13D49DC1172C1205003E7240 /* Backtoweb.h in Headers */,
 				13236341174BA6BA00F52335 /* FCServerContext.h in Headers */,
+				13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */,
 				135965851785FA57006332D2 /* FCHTMLTemplate.h in Headers */,
 				13D49DAC172C0257003E7240 /* FCURLRequestPrivate.h in Headers */,
 				13D49DAE172C02BE003E7240 /* FCResponseStreamPrivate.h in Headers */,
@@ -333,7 +334,6 @@
 				13D49DA4172C0082003E7240 /* fcgimisc.h in Headers */,
 				13D49DA6172C00A3003E7240 /* fcgio.h in Headers */,
 				13D49DAA172C015E003E7240 /* fcgios.h in Headers */,
-				13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

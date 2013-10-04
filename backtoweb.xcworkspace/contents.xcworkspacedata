@@ -28,7 +28,7 @@
          location = "group:handlers/UploadHandler/UploadHandler.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:handlers/HelloWorldHandler/HelloWorldHandler.xcodeproj">
+         location = "group:handlers/SamplesHandler/SamplesHandler.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
