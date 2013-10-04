@@ -85,9 +85,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1397A3EB177093E60018DB75"
-               BuildableName = "HelloWorldHandler.bundle"
-               BlueprintName = "HelloWorldHandler"
-               ReferencedContainer = "container:../../handlers/HelloWorldHandler/HelloWorldHandler.xcodeproj">
+               BuildableName = "SamplesHandler.bundle"
+               BlueprintName = "SamplesHandler"
+               ReferencedContainer = "container:../../handlers/SamplesHandler/SamplesHandler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

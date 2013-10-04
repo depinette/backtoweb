@@ -5,3 +5,5 @@
 #import <Backtoweb/FCURLRequest.h>
 #import <Backtoweb/FCResponseStream.h>
 #import <Backtoweb/FCServerContext.h>
+#import <Backtoweb/NSString+Backtoweb.h>
+#import <Backtoweb/FCHTMLTemplate.h>

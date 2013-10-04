@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		13236341174BA6BA00F52335 /* FCServerContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1323633F174BA6BA00F52335 /* FCServerContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13236342174BA6BA00F52335 /* FCServerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 13236340174BA6BA00F52335 /* FCServerContext.m */; };
+		135965851785FA57006332D2 /* FCHTMLTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 135965831785FA57006332D2 /* FCHTMLTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		135965861785FA57006332D2 /* FCHTMLTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 135965841785FA57006332D2 /* FCHTMLTemplate.m */; };
+		13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC3D5F178D505700D091E4 /* NSString+Backtoweb.h */; };
+		13AC3D62178D505700D091E4 /* NSString+Backtoweb.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC3D60178D505700D091E4 /* NSString+Backtoweb.m */; };
 		13D49D30172BFABC003E7240 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D2F172BFABC003E7240 /* Cocoa.framework */; };
 		13D49D3A172BFABC003E7240 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13D49D38172BFABC003E7240 /* InfoPlist.strings */; };
 		13D49D46172BFABC003E7240 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49D45172BFABC003E7240 /* SenTestingKit.framework */; };
@@ -67,6 +71,10 @@
 /* Begin PBXFileReference section */
 		1323633F174BA6BA00F52335 /* FCServerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FCServerContext.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		13236340174BA6BA00F52335 /* FCServerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCServerContext.m; sourceTree = "<group>"; };
+		135965831785FA57006332D2 /* FCHTMLTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCHTMLTemplate.h; path = Utils/FCHTMLTemplate.h; sourceTree = "<group>"; };
+		135965841785FA57006332D2 /* FCHTMLTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCHTMLTemplate.m; path = Utils/FCHTMLTemplate.m; sourceTree = "<group>"; };
+		13AC3D5F178D505700D091E4 /* NSString+Backtoweb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Backtoweb.h"; path = "Utils/NSString+Backtoweb.h"; sourceTree = "<group>"; };
+		13AC3D60178D505700D091E4 /* NSString+Backtoweb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Backtoweb.m"; path = "Utils/NSString+Backtoweb.m"; sourceTree = "<group>"; };
 		13D49D2C172BFABC003E7240 /* Backtoweb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backtoweb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D49D2F172BFABC003E7240 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		13D49D32172BFABC003E7240 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -142,12 +150,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135965821785FA06006332D2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13AC3D5F178D505700D091E4 /* NSString+Backtoweb.h */,
+				13AC3D60178D505700D091E4 /* NSString+Backtoweb.m */,
+				135965831785FA57006332D2 /* FCHTMLTemplate.h */,
+				135965841785FA57006332D2 /* FCHTMLTemplate.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		13D49D22172BFABC003E7240 = {
 			isa = PBXGroup;
 			children = (
 				13D49D92172C003C003E7240 /* libfcgi */,
 				13D49D80172BFDED003E7240 /* categories */,
 				13D49D83172BFDED003E7240 /* mime */,
+				135965821785FA06006332D2 /* Utils */,
 				13D49D35172BFABC003E7240 /* backtoweb */,
 				13D49D4B172BFABC003E7240 /* backtowebTests */,
 				13D49D2E172BFABC003E7240 /* Frameworks */,
@@ -297,6 +317,7 @@
 				13D49D8A172BFDED003E7240 /* DDData.h in Headers */,
 				13D49DC1172C1205003E7240 /* Backtoweb.h in Headers */,
 				13236341174BA6BA00F52335 /* FCServerContext.h in Headers */,
+				135965851785FA57006332D2 /* FCHTMLTemplate.h in Headers */,
 				13D49DAC172C0257003E7240 /* FCURLRequestPrivate.h in Headers */,
 				13D49DAE172C02BE003E7240 /* FCResponseStreamPrivate.h in Headers */,
 				13D49DB0172C0352003E7240 /* FCHandlerItemPrivate.h in Headers */,
@@ -312,6 +333,7 @@
 				13D49DA4172C0082003E7240 /* fcgimisc.h in Headers */,
 				13D49DA6172C00A3003E7240 /* fcgio.h in Headers */,
 				13D49DAA172C015E003E7240 /* fcgios.h in Headers */,
+				13AC3D61178D505700D091E4 /* NSString+Backtoweb.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +458,8 @@
 				13D49D99172C0060003E7240 /* fcgio.cpp in Sources */,
 				13D49D9A172C0060003E7240 /* os_unix.c in Sources */,
 				13236342174BA6BA00F52335 /* FCServerContext.m in Sources */,
+				135965861785FA57006332D2 /* FCHTMLTemplate.m in Sources */,
+				13AC3D62178D505700D091E4 /* NSString+Backtoweb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
