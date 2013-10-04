@@ -122,6 +122,7 @@ DLLAPI int OS_IsFcgi(int sock);
 DLLAPI void OS_SetFlags(int fd, int flags);
 
 DLLAPI void OS_ShutdownPending(void);
+DLLAPI int OS_IsShutdownPending(void);//added DEPSYS
 
 #if defined (__cplusplus) || defined (c_plusplus)
 } /* terminate extern "C" { */

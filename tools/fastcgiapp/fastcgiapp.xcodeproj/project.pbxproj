@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1384D901179FC00500CD5ADD /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1384D900179FC00500CD5ADD /* AppKit.framework */; };
 		13D49DBA172C0B81003E7240 /* backtoweb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49DB8172C0B81003E7240 /* backtoweb.framework */; };
 		13D49DBB172C0B81003E7240 /* Lumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D49DB9172C0B81003E7240 /* Lumberjack.framework */; };
-		6302AFEE142114CF0021FD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6302AFED142114CF0021FD25 /* Foundation.framework */; };
+		6302AFEE142114CF0021FD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6302AFED142114CF0021FD25 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		6302AFF1142114CF0021FD25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6302AFF0142114CF0021FD25 /* main.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1384D900179FC00500CD5ADD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		13D49DB8172C0B81003E7240 /* backtoweb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = backtoweb.framework; path = "../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/backtoweb.framework"; sourceTree = "<group>"; };
 		13D49DB9172C0B81003E7240 /* Lumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lumberjack.framework; path = "../../../Library/Developer/Xcode/DerivedData/B2WApp-bjygotpnjppkcgeepwnczaklrxsx/Build/Products/Debug/Lumberjack.framework"; sourceTree = "<group>"; };
 		6302AFE9142114CF0021FD25 /* fastcgiapp.fcgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fastcgiapp.fcgi; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1384D901179FC00500CD5ADD /* AppKit.framework in Frameworks */,
 				13D49DBA172C0B81003E7240 /* backtoweb.framework in Frameworks */,
 				13D49DBB172C0B81003E7240 /* Lumberjack.framework in Frameworks */,
 				6302AFEE142114CF0021FD25 /* Foundation.framework in Frameworks */,
@@ -68,6 +71,7 @@
 		6302AFEC142114CF0021FD25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1384D900179FC00500CD5ADD /* AppKit.framework */,
 				13D49DB8172C0B81003E7240 /* backtoweb.framework */,
 				13D49DB9172C0B81003E7240 /* Lumberjack.framework */,
 				6302AFED142114CF0021FD25 /* Foundation.framework */,

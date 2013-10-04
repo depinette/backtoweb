@@ -107,6 +107,10 @@ void OS_ShutdownPending()
 {
     shutdownPending = TRUE;
 }
+int OS_IsShutdownPending()//added DEPSYS
+{
+    return shutdownPending;
+}
 
 static void OS_Sigusr1Handler(int signo)
 {

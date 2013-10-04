@@ -237,9 +237,23 @@ static NSCharacterSet* querySeparators = nil;
     }
     return httpBodyStream;
 }
-
 #pragma mark -
 #pragma mark private
+void catcher(int sig)
+{
+    //NSLog(@"   Signal catcher called for signal %d\n", sig);
+}
+#include <sys/socket.h>
++(void)cancelWaitingRequest
+{
+    //TODO why not use SIGUSR1?
+    struct sigaction sact;
+    sigemptyset(&sact.sa_mask);
+    sact.sa_flags = 0;
+    sact.sa_handler = catcher;
+    sigaction(SIGUSR2/*SIGALRM*/, &sact, NULL);
+    raise(SIGUSR2);
+}
 
 +(FCURLRequest*)waitForNextIncomingRequest
 {
@@ -252,7 +266,7 @@ static NSCharacterSet* querySeparators = nil;
     {
         DDLogError(@"FCGX_Accept_r failed with return %d", ret);
         free(pRequest);
-        return nil;
+        return nil;//will make the fastcgiapp quit
     }
     
     FCURLRequest* newRequest = [[FCURLRequest alloc] initWithRequest:pRequest];

@@ -52,6 +52,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 {
     __strong NSLock* handlersLock;
     Class *handlerClasses;
+    __strong dispatch_group_t group;
 }
 @synthesize requestHandlers;
 
@@ -70,6 +71,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
         self.requestHandlers = [NSMutableArray array];
         handlersLock = [[NSLock alloc] init];
         handlerClasses = NULL;
+        group = dispatch_group_create();
     }
     return self;
 }
@@ -80,7 +82,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
         free(handlerClasses);
 }
 
-
+#pragma mark - helpers
 -(void)findAndRegisterHandlers
 {
     int numClasses;
@@ -264,19 +266,23 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 }*/
 
 #pragma mark -
-#pragma mark Find the handler
+#pragma mark launch the handlers
 -(void)handleRequest:(FCURLRequest*)request
 {
    [handlersLock lock];
     //NSArray is thread safe
    __block NSArray* handlers = [[NSArray alloc] initWithArray:self.requestHandlers];
    [handlersLock unlock];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
+    dispatch_group_async(group, queue,^
     {
+        
         @autoreleasepool { //http://www.cocoabuilder.com/archive/cocoa/305168-dispatch-queues-and-autorelease-pools.html
+            
+            dispatch_source_t timer = [self startWatchDog:[[request valueForHTTPHeaderField:@"WATCHDOG_TIMER_SEC"] doubleValue]];
+            
             NSUInteger nbHandler = [handlers count];
-            DDLogVerbose(@"Number of Handlers: %ld", nbHandler);
             FCResponseStream* responseStream = [[FCResponseStream alloc] initWithRequest:request];
             NSMutableDictionary* context = [NSMutableDictionary new];
             for (int index = 0; index < nbHandler; index++)
@@ -291,9 +297,56 @@ static int ddLogLevel = LOG_LEVEL_WARN;
             context = nil;
             responseStream = nil;
             handlers = nil;
+            dispatch_source_cancel(timer);
+            //DDLogVerbose(@"Task took %f seconds", timeout);
         }
+
     });
 }
 
+-(void)waitUntilCurrentRequestsFinish
+{
+    DDLogVerbose(@"waitUntilCurrentRequestsFinish");
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+}
 
+#define MAX_WATCHDOG_TIMEOUT_SEC  600.0 
+-(dispatch_source_t)startWatchDog:(double)watchdogTimer
+{
+    static dispatch_queue_t queue = NULL;
+    
+    dispatch_source_t timer;
+    @synchronized (queue)
+    {
+        if (queue == NULL)
+            queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    }
+
+    //minimum 1 sec
+    double timeout = fmax(1.0, fmin( MAX_WATCHDOG_TIMEOUT_SEC,watchdogTimer));
+    DDLogError(@"start WATCHDOG %f seconds", timeout);
+    
+    // create our timer source
+    @synchronized (queue)
+    {
+        timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    }
+
+    //set the timeout
+    dispatch_source_set_timer(timer,
+                              dispatch_time(DISPATCH_TIME_NOW, timeout * NSEC_PER_SEC),
+                              DISPATCH_TIME_FOREVER, 0);
+    
+    dispatch_source_set_event_handler(timer, ^
+    {
+        DDLogError(@"WATCHDOG: task took longer than %f seconds", timeout);
+        dispatch_source_cancel(timer);
+        
+        //temp exit(0); //TODO clean exit
+    });
+    
+    // start the timer
+    dispatch_resume(timer);
+    return timer;
+}
 @end

@@ -62,34 +62,43 @@ int main(int argc, const char * argv[])
         path = [[path stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];
          */
         
-        FCHandlerManager* handlerManager = [FCHandlerManager sharedInstance];
-
-        NSString *path = [[FCServerContext sharedInstance] handlersDirectory];
-        [handlerManager loadHandlerBundles:path];
-        [handlerManager findAndRegisterHandlers];
-        
-        for (;;)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void)
         {
-            @autoreleasepool
+            FCHandlerManager* handlerManager = [FCHandlerManager sharedInstance];
+
+            NSString *path = [[FCServerContext sharedInstance] handlersDirectory];
+            [handlerManager loadHandlerBundles:path];
+            [handlerManager findAndRegisterHandlers];
+            
+            for (;;)
             {
-                
-                FCURLRequest* request = [FCURLRequest waitForNextIncomingRequest];
-                if (request)
+                @autoreleasepool
                 {
-                    DDLogCVerbose(@"handling request %@", request.URL.absoluteString);
-                    [handlerManager handleRequest:request];
-                    //NSLog(@"end handling");
-                    request = nil;
-                }
-                else
-                {
-                    //never called. TODO non blocking socket with SIGUSR1 handling?
-                    //FCHandlerManager* handlerManager = [FCHandlerManager sharedInstance];
-                    //[handlerManager willTerminate];
-                    DDLogCError(@"request null");
+                    
+                    FCURLRequest* request = [FCURLRequest waitForNextIncomingRequest];
+                    if (request)
+                    {
+                        DDLogCVerbose(@"handling request %@", request.URL.absoluteString);
+                        [handlerManager handleRequest:request];
+                        //NSLog(@"end handling");
+                        request = nil;
+                    }
+                    else
+                    {
+                        //
+                        if (FCGX_IsShutdownPending())
+                        {
+                            //FCHandlerManager* handlerManager = [FCHandlerManager sharedInstance];
+                            [handlerManager willTerminate];
+                            break;
+                        }
+                        DDLogCError(@"request null");
+                    }
                 }
             }
-        }
+            [handlerManager waitUntilCurrentRequestsFinish];
+        });
+        [[NSApplication sharedApplication] run];
     }
     return 0;
 }

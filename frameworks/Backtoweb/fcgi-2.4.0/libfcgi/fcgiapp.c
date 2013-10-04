@@ -76,6 +76,11 @@ void FCGX_ShutdownPending(void)
     OS_ShutdownPending();
 }
 
+int FCGX_IsShutdownPending(void)
+{
+    return OS_IsShutdownPending();
+}
+
 static void *Malloc(size_t size)
 {
     void *result = malloc(size);

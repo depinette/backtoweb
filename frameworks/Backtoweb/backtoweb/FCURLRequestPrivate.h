@@ -8,6 +8,7 @@
 +(FCURLRequest*)waitForNextIncomingRequest;
 - (id)initWithRequest:(FCGX_Request*)pRequest;
 - (FCGX_Stream*)outStream;
++(void)cancelWaitingRequest;
 @end
 
 @protocol MultipartFormDataParserDelegate;

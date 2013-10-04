@@ -614,6 +614,9 @@ DLLAPI void FCGX_FreeStream(FCGX_Stream **stream);
  * ----------------------------------------------------------------------
  */
 DLLAPI void FCGX_ShutdownPending(void);
+    
+//addedd DEPSYS
+DLLAPI int FCGX_IsShutdownPending(void);
 
 #if defined (__cplusplus) || defined (c_plusplus)
 } /* terminate extern "C" { */

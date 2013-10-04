@@ -42,4 +42,5 @@
 - (void)loadHandlerBundles:(NSString*)hostName;
 - (void)removeHandler:(id)handlerItem;
 - (void)willTerminate;
+-(void)waitUntilCurrentRequestsFinish;
 @end
